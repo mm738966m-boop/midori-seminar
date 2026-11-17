@@ -558,6 +558,25 @@ button.ui.cp,a.ui.cp{white-space:nowrap}
 .sumaho img{width:150px;height:150px;image-rendering:pixelated}
 .sumaho span{font-size:15px;font-weight:800;line-height:1.35;text-align:center;color:var(--ink)}
 
+/* 11/17 夕：39枚目を「いま → 任せられる分 → 最初の1つ」の流れに */
+.yf{display:grid;grid-template-columns:1fr 46px 1fr 46px 1fr;align-items:stretch;gap:6px;margin-top:22px}
+.yfc{background:#fff;border:3px solid var(--teal);border-radius:26px;overflow:hidden;box-shadow:0 10px 26px rgba(10,90,98,.12);display:flex;flex-direction:column}
+.yfc .lb{background:var(--teal);color:#fff;font-size:25px;font-weight:900;text-align:center;padding:8px 10px;line-height:1.3;white-space:nowrap}
+.yfc .bd{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px 12px 16px}
+.yfc small{font-size:20px;font-weight:700;color:var(--ink);opacity:.75}
+.yfc b.num{font-size:74px;font-weight:900;line-height:1.15;color:var(--teal);white-space:nowrap}
+.yfc b.num i{font-style:normal;font-size:.42em;margin-left:3px}
+.yfc b.t{font-size:38px;font-weight:900;line-height:1.3;color:#8A6410;margin:4px 0}
+.yfc p{margin:4px 0 0;font-size:22px;font-weight:900;line-height:1.4}
+.yfc.hot{border-color:var(--coral);box-shadow:0 14px 34px rgba(232,115,74,.28)}
+.yfc.hot .lb{background:var(--coral)}
+.yfc.hot b.num{color:#E0431A;font-size:86px}
+.yfc.hot p{color:#E0431A;font-size:26px}
+.yfc.gold{border-color:#D9A441}
+.yfc.gold .lb{background:#D9A441;color:#3A2A05}
+.yfa{display:flex;align-items:center;justify-content:center;font-size:34px;color:#D9A441}
+.ykb small{display:block;font-size:.66em;font-weight:900;color:#BFE3E0;letter-spacing:.06em}
+
 </style>
 </head>
 <body>
@@ -1119,14 +1138,16 @@ button.ui.cp,a.ui.cp{white-space:nowrap}
 </section>
 
 <section class="slide" data-sec="4" data-steps="4">
-  <span class="eyebrow r">一覧を読み解くと（きょうの昼までに届いた、青年部会の5社）</span>
-  <h1 class="r" style="--i:1;font-size:46px">数字を並べると、<em class="c">3つ</em>見えてきます。</h1>
-  <div class="yk">
-    <div class="ykc" data-s="1"><span class="n">1</span><b>およそ半分は、<br>AIに任せられる</b><div class="v"><small>1社あたり 年間</small>約102<i>万円</i><em>→ 約51<i>万円</i></em></div></div>
-    <div class="ykc" data-s="2"><span class="n">2</span><b>5社とも、<br>最初の1つは同じ仕事</b><div class="v t">データ入力・<br>転記・集計</div><p>会社が違っても、重なります。</p></div>
-    <div class="ykc" data-s="3"><span class="n">3</span><b>時間にすると、<br>1社で週10時間</b><div class="v"><small>月にすると</small><em>約44<i>時間</i></em></div><p>毎週1日以上が、事務だけに。</p></div>
+  <span class="eyebrow r">届いた5社の数字を、AIが読み解くと（きょうの昼まで・青年部会）</span>
+  <h1 class="r" style="--i:1;font-size:48px">くり返しの事務、<em class="c">半分はAIに任せられる</em>。</h1>
+  <div class="yf">
+    <div class="yfc" data-s="1"><div class="lb">いま、かかっているお金</div><div class="bd"><small>1社あたり 年間</small><b class="num">約102<i>万円</i></b><p>事務だけで、週10時間</p></div></div>
+    <div class="yfa" data-s="2">▶</div>
+    <div class="yfc hot" data-s="2"><div class="lb">そのうち、AIに任せられる</div><div class="bd"><small>1社あたり 年間</small><b class="num">約51<i>万円</i></b><p>およそ半分</p></div></div>
+    <div class="yfa" data-s="3">▶</div>
+    <div class="yfc gold" data-s="3"><div class="lb">最初に任せる仕事</div><div class="bd"><small>5社とも、同じでした</small><b class="t">データ入力・<br>転記・集計</b><p>会社が違っても、重なります</p></div></div>
   </div>
-  <div class="ykb" data-s="4">もし会場の50社が同じなら、年間 <b>約5,100万円</b>。<span>そのうち <b class="g">約2,550万円</b>が、AIに任せられる計算です。</span></div>
+  <div class="ykb" data-s="4"><small>会場の50社で考えると</small>年間 <b>約5,100万円</b> のうち、<b class="g">約2,550万円</b> がAIに任せられる計算です。</div>
 </section>
 
 <section class="slide" data-sec="4" data-conf="1" data-steps="3">
@@ -1188,11 +1209,12 @@ button.ui.cp,a.ui.cp{white-space:nowrap}
 <section class="slide bleed" data-sec="5">
   <img class="bg" src="img/future_wide.jpg" alt="">
   <div class="veil warm"></div>
-  <div class="inner" style="padding:40px 70px 40px;justify-content:center"><div class="box" style="max-width:600px">
-    <h1 class="hero r" style="--i:1;font-size:44px;white-space:nowrap">くり返しの事務は、<em class="c">AIに</em>。<br>人は、<em class="c">人にしか<br>できない仕事</em>へ。</h1>
-    <p class="lead r" style="--i:2;font-size:30px;color:var(--ink);margin-top:10px">ご質問を、どうぞ。</p>
-    <div class="col pop" style="--i:3;margin-top:18px;gap:8px;align-items:center;background:rgba(255,255,255,.96);border-radius:26px;padding:16px 18px;box-shadow:0 12px 30px rgba(120,90,20,.2);width:fit-content">
-      <img src="img/qr_omiyage.png" alt="QR" style="width:200px;height:200px;image-rendering:pixelated">
+  <div class="inner" style="padding:40px 70px 40px;justify-content:center"><div class="box" style="max-width:660px">
+    <h1 class="hero r" style="--i:1;font-size:40px;white-space:nowrap">くり返しの事務は、<em class="c">AIに</em>。<br>人は、<em class="c">人にしかできない仕事</em>へ。</h1>
+    <p class="r" style="--i:2;font-size:27px;font-weight:900;line-height:1.5;color:var(--deep);margin-top:14px;white-space:nowrap">いま、やるかどうかで。<br>社長の未来と、従業員の未来が<em class="c" style="font-style:normal">変わっていきます</em>。</p>
+    <p class="lead r" style="--i:3;font-size:26px;color:var(--ink);margin-top:12px">ご質問を、どうぞ。</p>
+    <div class="col pop" style="--i:4;margin-top:14px;gap:8px;align-items:center;background:rgba(255,255,255,.96);border-radius:26px;padding:16px 18px;box-shadow:0 12px 30px rgba(120,90,20,.2);width:fit-content">
+      <img src="img/qr_omiyage.png" alt="QR" style="width:170px;height:170px;image-rendering:pixelated">
       <p style="font-size:21px;font-weight:900;line-height:1.45;color:var(--deep);text-align:center">LINEを追加で、実演セット<br>続きの60分のご予約</p>
     </div>
   </div></div>
