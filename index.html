@@ -421,11 +421,121 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
 .io ul.two{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
 .io ul.two li{font-size:22px}
 
+/* ===== 11/17 朝の直し ===== */
+.frame.ans .opt.ok{border:7px solid #E0431A;background:#fff;transform:scale(1.08);box-shadow:0 0 0 10px #FFD3C4,0 14px 0 rgba(170,50,15,.28)}
+.frame.ans .opt.ok .abc{background:#E0431A;color:#fff}
+.frame.ans .opt.ok .yen{color:#D8360F;font-size:76px;-webkit-text-stroke:2px #D8360F;paint-order:stroke fill;text-shadow:0 3px 0 #fff,3px 0 0 #fff,-3px 0 0 #fff,0 -3px 0 #fff,0 6px 0 rgba(170,50,15,.18)}
+.opt .seikai{position:absolute;right:-16px;top:-20px;background:#E0431A;color:#fff;font-size:24px;font-weight:900;padding:6px 20px;border-radius:999px;transform:rotate(6deg) scale(0);transition:transform .45s cubic-bezier(.2,1.6,.4,1) .2s;box-shadow:0 5px 0 rgba(170,50,15,.35)}
+.frame.ans .opt.ok .seikai{transform:rotate(6deg) scale(1)}
+.redout{color:#D8360F!important;-webkit-text-stroke:1.5px #D8360F;text-shadow:0 3px 0 #fff,3px 0 0 #fff,-3px 0 0 #fff,0 -3px 0 #fff,0 7px 0 rgba(170,50,15,.16)}
+.day time{flex:0 0 128px;font-size:30px}
+.voice{display:flex;gap:18px;align-items:center;background:#0F3A3F;color:#EAF7F7;border-radius:26px;padding:22px 26px;box-shadow:0 12px 28px rgba(10,60,66,.28)}
+.voice .mic{flex:0 0 78px;height:78px;border-radius:50%;background:var(--coral);display:flex;align-items:center;justify-content:center;animation:mic 1.4s ease-in-out infinite}
+.voice .mic svg{width:42px;height:42px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.voice .k{font-size:20px;font-weight:900;color:var(--sun)}
+.voice p{font-size:29px;line-height:1.55;font-weight:900;margin-top:4px;word-break:auto-phrase}
+.voice.sm{padding:14px 20px}.voice.sm .mic{flex:0 0 56px;height:56px}.voice.sm .mic svg{width:30px;height:30px}.voice.sm p{font-size:22px}
+@keyframes mic{0%,100%{box-shadow:0 0 0 0 rgba(232,115,74,.7)}50%{box-shadow:0 0 0 16px rgba(232,115,74,0)}}
+a.ui.cp{display:inline-flex;align-items:center;background:var(--coral);color:#fff;font-weight:900;font-size:26px;padding:12px 28px;border-radius:999px;box-shadow:0 6px 0 rgba(180,70,30,.45)}
+/* 1つずつ光る */
+.fx{opacity:.26;transition:all .45s cubic-bezier(.2,.9,.3,1.2)}
+.fx.done{opacity:1}
+.fx.cur{opacity:1;transform:scale(1.045);z-index:3}
+body.scroll .fx{opacity:1}
+.sky{position:absolute;right:76px;top:34px;display:flex;gap:6px;z-index:2}
+.sky i{font-style:normal;font-size:18px;font-weight:900;padding:5px 16px;border-radius:999px;background:#E6EFF0;color:#8FA6A9}
+.sky i.on{background:var(--coral);color:#fff;box-shadow:0 4px 0 rgba(180,70,30,.4)}
+.slide.night{background:radial-gradient(520px 300px at 92% 6%,rgba(255,224,138,.35),transparent 70%),linear-gradient(160deg,#EAF2FB 0%,#DCE9F6 55%,#CFE3EF 100%)}
+.dys{display:flex;flex-direction:column;gap:13px;margin-top:20px}
+.dys.c2{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px;margin-top:16px}
+.dy{display:flex;align-items:center;gap:20px;background:#fff;border:3px solid var(--line);border-radius:22px;padding:13px 22px;box-shadow:0 6px 16px rgba(14,124,134,.08)}
+.dy time{flex:0 0 150px;font-size:42px;font-weight:900;color:var(--teal);font-variant-numeric:tabular-nums;text-align:center;line-height:1.05}
+.dy time small{display:block;font-size:17px;color:var(--ink2)}
+.dy b{display:block;font-size:30px;font-weight:900;line-height:1.3}
+.dy span{display:block;font-size:22px;font-weight:700;color:var(--ink2);line-height:1.4;margin-top:2px}
+.dy.cur{border-color:var(--coral);background:#FFF6F1;box-shadow:0 0 0 7px rgba(232,115,74,.16),0 14px 30px rgba(232,115,74,.22)}
+.dy.cur time{color:var(--coral)}
+.dy.cur span{color:var(--ink)}
+.dys.c2 .dy{padding:11px 16px;gap:14px}.dys.c2 .dy time{flex:0 0 118px;font-size:34px}.dys.c2 .dy b{font-size:25px}.dys.c2 .dy span{font-size:20px}
+/* 塗り分け 詳細 */
+.flow5.det{margin-top:20px;gap:12px}
+.flow5.det .f5{padding:16px 10px 14px;font-size:27px}
+.flow5.det .f5 p{font-size:19px;line-height:1.45;font-weight:700;margin-top:10px;background:rgba(255,255,255,.94);color:var(--ink);border-radius:12px;padding:8px 6px;min-height:72px;display:flex;align-items:center;justify-content:center}
+.flow5.det .f5.cur{box-shadow:0 0 0 7px rgba(232,115,74,.35),0 14px 30px rgba(10,90,98,.25)}
+/* 助成金の案 */
+ul.an{margin:2px 0 0}
+ul.an li{font-size:23px;font-weight:700;line-height:1.5;padding-left:28px;position:relative}
+ul.an li:before{content:"";position:absolute;left:6px;top:14px;width:11px;height:11px;border-radius:50%;background:var(--coral)}
+ul.an b{color:#C4491F;font-weight:900}
+/* コツ1 */
+.kz{flex:1;position:relative;display:flex;gap:18px;align-items:center;border-radius:28px;padding:18px 20px;border:4px solid var(--line);background:#fff}
+.kz img{flex:0 0 210px;width:210px;height:210px;object-fit:cover;border-radius:22px}
+.kz .tag{font-size:21px;font-weight:900;color:var(--ink2)}
+.kz h3{font-size:33px;line-height:1.3;font-weight:900;margin:4px 0 8px}
+.kz p{font-size:24px;line-height:1.45;font-weight:900}
+.kz.bad{background:#F2F4F5;border-color:#C9D3D5}
+.kz.bad h3,.kz.bad p{color:#6B7F82}
+.kz.good{border-color:var(--coral);background:#FFF6F1;box-shadow:0 0 0 7px rgba(232,115,74,.14)}
+.kz.good .tag{color:var(--coral)}
+.kz .batsu,.kz .maru{position:absolute;right:14px;top:-34px;font-size:92px;font-weight:900;line-height:1}
+.kz .batsu{color:#5F7477;transform:rotate(8deg)}
+.kz .maru{color:var(--coral)}
+.blink{display:inline-block;background:var(--coral);color:#fff!important;padding:4px 16px;border-radius:12px;animation:blink 1s ease-in-out infinite;margin-bottom:6px}
+@keyframes blink{0%,100%{box-shadow:0 0 0 0 rgba(232,115,74,.9),0 0 0 0 rgba(255,224,138,.9);transform:scale(1)}50%{box-shadow:0 0 0 12px rgba(232,115,74,0),0 0 26px 8px rgba(255,224,138,.95);transform:scale(1.06)}}
+svg.loss{width:100%;height:auto;font-family:inherit}
+/* 目安 */
+.slip.wide{width:400px}
+.slip.wide h4{display:flex;justify-content:space-between;align-items:center;font-size:21px}
+.slip.wide h4 span{font-size:16px;font-weight:700;opacity:.85}
+.slip.wide .r{padding:9px 16px;font-size:22px}
+.slip.wide .r.sub{font-size:19px;color:var(--ink2);padding:7px 16px}
+.slip.wide .r.cap{background:var(--coral);color:#fff;font-size:17px;padding:6px 16px;justify-content:center;border-bottom:0}
+.slip.wide .r.sum{font-size:27px}
+.slip [data-s]{transform:none}
+.mini{background:#fff;border:3px solid var(--line);border-radius:18px;padding:10px 16px;text-align:center}
+.mini small{display:block;font-size:17px;font-weight:900;color:var(--teal)}
+.mini b{font-size:31px;font-weight:900;white-space:nowrap}
+.mini.hot{border-color:var(--coral);background:#FFF6F1}.mini.hot small{color:var(--coral)}.mini.hot b{color:#D8360F;font-size:38px}
+.eq{font-size:40px;font-weight:900;color:var(--goldfill)}
+.chain{display:flex;align-items:center;gap:10px;margin-top:22px}
+.chain span{font-size:30px;color:var(--goldfill);font-weight:900}
+.cn{flex:1;background:var(--mint);border-radius:20px;padding:12px 6px;text-align:center}
+.cn small{display:block;font-size:19px;font-weight:900;color:var(--deep)}
+.cn b{font-size:58px;font-weight:900;line-height:1.1;color:var(--ink)}
+.cn b i{font-style:normal;font-size:.4em;margin-left:2px}
+.cn.hot{background:var(--coral)}.cn.hot small,.cn.hot b{color:#fff}
+/* 書く時間 */
+.tmbox{position:absolute;right:44px;top:30px;background:#fff;border:3px solid var(--line);border-radius:22px;padding:8px 16px 12px;text-align:center;z-index:3;display:flex;flex-direction:column;align-items:center}
+.tmbox .timer{font-size:54px;line-height:1.1}
+/* 平均 */
+.hk{display:flex;flex-direction:column;gap:20px;margin-top:26px}
+.hkrow{display:grid;grid-template-columns:270px 1fr 330px;gap:20px;align-items:center}
+.hkrow b{font-size:26px;font-weight:900;line-height:1.35;text-align:right}
+.hkbar{height:66px;background:var(--soft);border-radius:18px;overflow:hidden}
+.hkbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#19A0AB,var(--teal));border-radius:18px;transition:width 1.2s cubic-bezier(.2,.8,.2,1) .2s}
+.hkrow.hot .hkbar i{background:linear-gradient(90deg,#F39A75,#E0431A)}
+.hkrow.in .hkbar i{width:var(--w)} body.scroll .hkbar i{width:var(--w)}
+/* できました */
+ul.chk{margin-top:14px}
+ul.chk li{font-size:31px;font-weight:900;line-height:1.5;padding-left:52px;position:relative;margin-top:6px}
+ul.chk li:before{content:"✓";position:absolute;left:0;top:2px;width:40px;height:40px;border-radius:50%;background:var(--coral);color:#fff;font-size:26px;display:flex;align-items:center;justify-content:center}
+.lp.gold{border-color:var(--goldfill);background:var(--goldbg)}.lp.gold .n{color:var(--gold)}
+
+.gifts.g3{grid-template-columns:repeat(3,1fr);margin-top:10px}
+.gifts.g3 .g img{height:100px}
+button.ui.cp,a.ui.cp{white-space:nowrap}
+.tmbox{top:auto;bottom:84px;right:50px}
+.flow5.det .f5 p{min-height:66px;font-size:20px}
+
+.tmbox{top:26px;bottom:auto;right:46px}
+.gifts.g3{margin-top:6px}.gifts.g3 .g img{height:86px}.gifts.g3 .g b{font-size:22px;margin-top:4px}
+
+.zoomer .hl b{left:4px;top:4px}
+
 </style>
 </head>
 <body>
 <div class="deck" id="deck">
-<!-- 1 表紙 -->
 <section class="slide tint" data-sec="0">
   <span class="eyebrow r">緑法人会 青年部会 ビジネスセミナー｜2026年11月17日</span>
   <h1 class="mega r" style="--i:1;margin-top:22px">その事務仕事、<br><em class="c">年間いくら？</em></h1>
@@ -433,110 +543,122 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
   <div class="grow"></div>
   <p class="note r" style="--i:3;font-size:23px;font-weight:700">講師　fulfull株式会社 代表取締役　森川 満章（もりかわ みちあき）</p>
   <img class="pop" src="img/v2_money.jpg" alt="" style="--i:2;position:absolute;right:56px;top:128px;width:430px;border-radius:36px;box-shadow:0 18px 44px rgba(10,90,98,.2)">
-  <span class="sticker pop" style="--i:4;position:absolute;right:70px;top:66px;font-size:26px;z-index:3">会場で、御社の数字が出ます</span>
+  <span class="sticker pop" style="--i:4;position:absolute;right:70px;top:66px;font-size:26px;z-index:3">会場で、ご自身の数字が出ます</span>
 </section>
 
-<!-- 2 クイズ -->
 <section class="slide" data-sec="0" data-steps="2" data-quiz="1">
   <span class="sticker gold r">最初に、クイズです</span>
   <h1 class="r" style="--i:1;margin-top:18px">毎日30分の、くり返しの事務。<br>1年で、<em class="c">いくら</em>になるでしょう？</h1>
   <div class="quiz">
     <div class="opt r" style="--i:2"><span class="abc">A</span><div class="yen num">約8<small>万円</small></div></div>
-    <div class="opt ok r" style="--i:3"><span class="abc">B</span><div class="yen num">約33<small>万円</small></div></div>
+    <div class="opt ok r" style="--i:3"><span class="seikai">正解</span><span class="abc">B</span><div class="yen num">約33<small>万円</small></div></div>
     <div class="opt r" style="--i:4"><span class="abc">C</span><div class="yen num">約60<small>万円</small></div></div>
   </div>
   <div class="row" data-s="2" style="margin-top:26px;gap:20px;align-items:center">
-    <span class="sticker" style="transform:rotate(-2deg);font-size:26px">社員5人が同じなら</span>
-    <div class="big cr num" style="font-size:84px">年間 約163<small>万円</small></div>
-    <span class="note" style="font-size:22px;font-weight:900">1人 約32.6万円 × 5人</span>
+    <span class="sticker" style="transform:rotate(-2deg);font-size:26px">従業員5人が同じなら</span>
+    <div class="big num redout" style="font-size:84px">年間 約163<small>万円</small></div>
+    <span class="note" style="font-size:22px;font-weight:900">1人 約32.5万円 × 5人</span>
   </div>
   <span class="hint">→ で答え</span>
 </section>
 
-<!-- 3 未来 -->
 <section class="slide bleed" data-sec="0">
-  <img class="bg" src="img/v2_morning.jpg" alt="">
+  <img class="bg" src="img/future_wide.jpg" alt="">
   <div class="veil warm"></div>
-  <div class="inner"><div class="box">
-    <span class="sticker teal r">こんな朝は、どうでしょう</span>
-    <h1 class="hero r" style="--i:1;margin-top:20px;font-size:58px;white-space:nowrap">朝、出社したら、<br><em class="c">もう終わっている。</em></h1>
-    <p class="lead r" style="--i:2;font-size:30px;color:var(--ink)">きのうの議事録も、請求書も、<br>けさの報告も。</p>
+  <div class="inner"><div class="box" style="max-width:640px">
+    <span class="sticker teal r">仕事が「自動で回る」会社は、こうなります</span>
+    <h1 class="hero r" style="--i:1;margin-top:20px;font-size:52px;white-space:nowrap">くり返しの事務は、<br><em class="c">AIが回す</em>。<br>人は、<em class="c">人にしか<br>できない仕事</em>へ。</h1>
   </div></div>
 </section>
 
-<!-- 4 その会社の1日 -->
-<section class="slide bleed" data-sec="0" data-steps="3">
+<section class="slide bleed" data-sec="0" data-steps="4">
   <img class="bg" src="img/future_wide.jpg" alt="">
-  <div class="inner"><div class="box" style="max-width:680px">
-    <span class="eyebrow gold r">その会社の、1日</span>
+  <div class="inner"><div class="box" style="max-width:690px">
+    <span class="eyebrow gold r">その会社で、起きること</span>
     <div class="day">
-      <div class="t" data-s="1"><time>8:00</time><b>議事録も請求書も、<br>出社前にできている。</b></div>
-      <div class="t" data-s="2"><time>13:00</time><b>社長は、現場と<br>お客さまのところへ。</b></div>
-      <div class="t" data-s="3"><time>17:30</time><b>全員が、定時に帰る。<br>人は、増やしていない。</b></div>
+      <div class="t" data-s="1"><time>スタッフ</time><b>くり返しの事務から離れて、<br>別の仕事ができる。</b></div>
+      <div class="t" data-s="2"><time>社長</time><b>お客さまと、人と話すことに<br>集中できる。</b></div>
+      <div class="t" data-s="3"><time>夕方</time><b>全員が、定時に帰る。</b></div>
+      <div class="t" data-s="4"><time>採用</time><b>人手不足に、<br>悩まなくてよくなる。</b></div>
     </div>
   </div></div>
 </section>
 
-<!-- 5 持ち帰り -->
+<section class="slide bleed" data-sec="0" data-steps="2">
+  <img class="bg" src="img/v3_irony.jpg" alt="">
+  <div class="veil warm"></div>
+  <div class="inner"><div class="box" style="max-width:520px">
+    <span class="sticker r">ただ、ひとつだけ困ったことが</span>
+    <h1 class="hero r" style="--i:1;margin-top:20px;font-size:54px">人を、増やさなくて<br>よくなります。</h1>
+    <h1 class="hero" data-s="1" style="margin-top:14px;font-size:54px">もしかすると、<br><em class="c">いまの人数も…？</em></h1>
+    <p class="lead" data-s="2" style="font-size:25px;color:var(--ink)">パートさんも、アルバイトさんも、<br>社員さんも。<br>そこをどうするかは、社長のお仕事です。</p>
+  </div></div>
+</section>
+
+<section class="slide tint" data-sec="0" data-steps="2">
+  <span class="eyebrow r">今日のお話</span>
+  <h1 class="r" style="--i:1;font-size:50px">今日は、よくある<em>AI研修</em>は、しません。</h1>
+  <div class="vs" style="margin-top:24px">
+    <div class="p r" style="--i:2"><span class="tag">よくあるAI研修</span><h3>AIの「使い方」を学ぶ。</h3><ul><li>質問のしかた、文章の作らせ方</li><li>使うたびに、人が頼む</li></ul></div>
+    <div class="p good" data-s="1"><span class="tag">今日のお話</span><h3>AIで、仕事を<br>「自動で回す」仕組みを作る。</h3><ul><li>時間が来たら、AIが始める</li><li>人は、できたものを確かめるだけ</li></ul></div>
+  </div>
+  <div class="row" data-s="2" style="margin-top:22px;gap:20px;align-items:center">
+    <div class="big num redout" style="font-size:76px"><span>20</span><small>社以上</small></div>
+    <p class="lead" style="margin-top:0;font-size:28px;color:var(--ink)">この「自動で回す仕組みづくり」を、<br>研修と伴走でサポートしています。</p>
+  </div>
+</section>
+
 <section class="slide" data-sec="0">
   <span class="eyebrow r">今日、お持ち帰りいただくもの</span>
-  <h1 class="r" style="--i:1;font-size:48px">手ぶらでは、<em>帰しません</em>。</h1>
-  <div class="row" style="margin-top:24px;gap:22px;align-items:stretch">
-    <div class="card r" style="--i:2;flex:0 0 300px;align-items:center;text-align:center;padding:16px 14px;gap:4px">
+  <h1 class="r" style="--i:1;font-size:44px">手ぶらでは、<em>帰しません</em>。</h1>
+  <div class="row" style="margin-top:20px;gap:22px;align-items:stretch">
+    <div class="card r" style="--i:2;flex:0 0 290px;align-items:center;text-align:center;padding:16px 14px;gap:4px">
       <span class="badge">1</span>
-      <div style="width:122px;rotate:-3deg;margin:4px 0 2px"><div class="sheetwrap"><img src="img/sheet_v2_omote.png" alt=""></div></div>
-      <div class="v" style="font-size:28px">御社の数字が<br>入った1枚</div>
+      <div style="width:118px;rotate:-3deg;margin:4px 0 2px"><div class="sheetwrap"><img src="img/sheet_v3_omote.png" alt=""></div></div>
+      <div class="v" style="font-size:27px">お手元の、<br>書き込む1枚</div>
       <div class="d" style="font-size:20px;white-space:nowrap">年間いくらかが分かり、<br>最初の1つが決まります。</div>
       <div class="pill" style="font-size:19px;margin-top:6px">ペンを1本、お手元に</div>
     </div>
-    <div class="card gold r" style="--i:3;flex:1;padding:20px 24px 18px;position:relative;border-width:3px;border-color:var(--goldfill)">
+    <div class="card gold r" style="--i:3;flex:1;padding:16px 24px 12px;gap:6px;position:relative;border-width:3px;border-color:var(--goldfill)">
       <span class="sticker" style="position:absolute;right:18px;top:-18px;font-size:24px">参加された方への特典</span>
       <div class="row" style="align-items:center;gap:12px"><span class="badge gold">2</span><div class="v" style="font-size:34px">今夜の実演セット</div></div>
-      <div class="d" style="color:var(--ink);font-size:22px;margin-top:2px">このあと目の前で動かす4つの仕事。その「AIへの頼み方」を、そのまま差し上げます。</div>
-      <div class="gifts">
+      <div class="d" style="color:var(--ink);font-size:21px;margin-top:0">目の前で動かす仕事の「AIへの頼み方」を、そのまま差し上げます。</div>
+      <div class="gifts g3">
         <div class="g pop" style="--i:4"><img src="img/demo_gijiroku.png" alt=""><b>議事録</b><span>の設定文</span></div>
-        <div class="g pop" style="--i:5"><img src="img/demo_seikyu.png" alt=""><b>請求書</b><span>の設定文</span></div>
-        <div class="g pop" style="--i:6"><img src="img/demo_sns.png" alt=""><b>SNSの発信</b><span>の設定文</span></div>
-        <div class="g pop" style="--i:7"><img src="img/demo_koukoku.png" alt=""><b>広告の報告</b><span>の設定文</span></div>
+        <div class="g pop" style="--i:5"><img src="img/demo_seikyu2.png" alt=""><b>請求書</b><span>の設定文</span></div>
+        <div class="g pop" style="--i:6"><img src="img/demo_sns2.png" alt=""><b>SNSの発信</b><span>の設定文</span></div>
       </div>
-      <div class="row r" style="--i:8;gap:10px;margin-top:12px;flex-wrap:wrap"><span class="pill solid" style="font-size:21px">＋ 会社で1回やってみる「明日の15分」手順書</span><span class="pill" style="font-size:21px;background:var(--coral);color:#fff">コピーして貼るだけ</span></div>
+      <div class="row r" style="--i:7;gap:10px;margin-top:10px;flex-wrap:wrap"><span class="pill solid" style="font-size:21px">＋ AIの道具 Claude Code の入れ方から</span><span class="pill solid" style="font-size:21px">＋「明日の15分」手順書</span></div>
+      <div class="row r" style="--i:8;gap:10px;margin-top:8px;align-items:center"><span class="pill" style="font-size:21px;background:var(--coral);color:#fff;flex:0 0 auto">ご希望の方には</span><span style="font-size:21px;font-weight:900;white-space:nowrap">「ホームページを自分たちで作る」設定文も。</span></div>
     </div>
   </div>
 </section>
 
-<!-- 6 先に頼む -->
 <section class="slide tint" data-sec="0">
   <span class="sticker r">先に1つ、AIに仕事を頼んでおきます</span>
-  <h1 class="r" style="--i:1;margin-top:16px;font-size:46px">きのうの打ち合わせの<em class="c">議事録</em>を、いま頼みます。</h1>
-  <div class="row" style="gap:26px;margin-top:16px;align-items:stretch">
-    <div class="col" style="flex:0 0 400px;gap:12px">
-      <div class="io r" style="--i:2;padding:14px 18px"><div class="k">AIに渡すもの</div><div class="v" style="font-size:25px">30分ほどの打ち合わせを、<br>文字にしたもの</div><div class="note" style="font-size:19px;margin-top:4px">Zoomの録画から、自動で文字になります。</div></div>
-      <div class="io out r" style="--i:3;padding:14px 18px"><div class="k">頼むこと</div><ul><li>決めたこと</li><li>宿題（だれが・いつまでに）</li><li>次回の予定</li><li>お礼メールの下書き</li></ul></div>
+  <h1 class="r" style="--i:1;margin-top:16px;font-size:44px">きのうの打ち合わせを、<em class="c">議事録</em>と<em class="c">経営の地図</em>に。</h1>
+  <div class="row" style="gap:26px;margin-top:18px;align-items:stretch">
+    <div class="col" style="flex:0 0 520px;gap:14px">
+      <div class="io r" style="--i:2;padding:16px 20px"><div class="k">きのうの打ち合わせ</div><div class="v" style="font-size:27px">大学の先生・ながたかさん<br><span style="font-size:.78em">（永澤 貴昭さん）</span></div><div class="note" style="font-size:21px;margin-top:6px;line-height:1.5;font-weight:700">クラウドファンディングを経て、<br>これから法人を設立される方のご相談です。</div></div>
+      <div class="io out r" style="--i:3;padding:14px 20px"><div class="k">AIに頼むこと</div><ul><li>議事録（決めたこと・宿題・次回）</li><li>その方が通る「経営の地図」1枚</li></ul></div>
     </div>
-    <div class="col" style="flex:1">
-      <div class="prompt sm r" style="--i:4;margin-top:16px;font-size:21px">「01_議事録」フォルダにある、Zoomの文字起こし（文字起こし_Aさん.txt）を読んでください。<br>そこから議事録を作ってください。中身は「決めたこと」「宿題（だれが・いつまでに）」「次回」の3つです。<br>あわせて、Aさんに送るお礼メールの下書きも作ってください。メールは送らず、文面を作るだけです。<br>できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。</div>
-      <div class="row r" style="--i:5;gap:14px;margin-top:16px;align-items:center">
-        <button class="ui cp" data-copy="「01_議事録」フォルダにある、Zoomの文字起こし（文字起こし_Aさん.txt）を読んでください。&#10;そこから議事録を作ってください。中身は「決めたこと」「宿題（だれが・いつまでに）」「次回」の3つです。&#10;あわせて、Aさんに送るお礼メールの下書きも作ってください。メールは送らず、文面を作るだけです。&#10;できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。">この文をコピー</button>
-        <span class="note" style="font-size:21px;font-weight:900">コピー → 画面を切り替える → Claudeに貼る</span>
-      </div>
-      <p class="lead r" style="--i:6;font-size:24px;margin-top:14px">頼んだら、こちらは話を続けます。<br>出来上がりは、あとで一緒に見ましょう。</p>
+    <div class="col" style="flex:1;justify-content:center">
+      <div class="voice r" style="--i:4"><span class="mic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg></span><div><div class="k">今日は、声で頼みます</div><p>「きのうの、ながたかさんとの打ち合わせを、<br>議事録と経営の地図にして」</p></div></div>
+      <p class="lead r" style="--i:5;font-size:25px;margin-top:20px">頼んだら、こちらは話を続けます。<br>出来上がりは、あとで一緒に見ましょう。</p>
     </div>
   </div>
 </section>
 
-<!-- 7 自己紹介の扉 -->
 <section class="slide tint center" data-sec="0">
   <span class="eyebrow r">ここで、少しだけ自己紹介</span>
   <h1 class="hero r" style="--i:1">AIに仕事を任せているのは、<br><em>どんな人なのか。</em></h1>
   <p class="lead r" style="--i:2;font-size:30px">まず、1分の動画をご覧ください。</p>
 </section>
 
-<!-- 8 動画 -->
 <section class="slide" data-sec="0" data-video="intro" style="padding:26px 76px 80px">
   <div class="grow" style="min-height:0"><video class="wide" id="intro" src="img/intro.mp4" poster="img/intro_poster.jpg" playsinline controls preload="metadata"></video></div>
 </section>
 
-<!-- 9 自己紹介1 -->
 <section class="slide" data-sec="0" data-steps="5">
   <span class="eyebrow r">自己紹介</span>
   <h1 class="r" style="--i:1">特別な才能は、<em>なかった</em>。<span style="font-size:.42em;margin-left:.8em;color:var(--ink2)">森川 満章｜fulfull株式会社 代表取締役</span></h1>
@@ -550,19 +672,17 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
   <span class="hint">→ で1コマずつ</span>
 </section>
 
-<!-- 10 自己紹介2 -->
 <section class="slide" data-sec="0" data-steps="5">
   <span class="eyebrow r">自己紹介</span>
   <div class="manga c4" style="margin-top:6px">
     <div class="koma" data-s="1"><img src="img/jiko_m5.jpg" alt=""><p><b>30歳</b>クレカ枠6万円で、<br>投資を始める</p></div>
-    <div class="koma" data-s="2"><img src="img/jiko_m6.jpg" alt=""><p><b>2020年</b>fulfull創業。社員ゼロ・<br>全部オンライン</p></div>
+    <div class="koma" data-s="2"><img src="img/jiko_m6.jpg" alt=""><p><b>2020年</b>fulfull創業。従業員ゼロ・<br>全部オンライン</p></div>
     <div class="koma" data-s="3"><img src="img/jiko_m7.jpg" alt=""><p><b>2023年</b>「保険も見て」の声で、<br>保険募集人に</p></div>
-    <div class="koma" data-s="4"><img src="img/jiko_m8.jpg" alt=""><p><b>いま</b>会社の仕事を、<br>AIと一緒に回す</p></div>
+    <div class="koma" data-s="4"><img src="img/jiko_m8.jpg" alt=""><p><b>いま</b>お金のプロとして、<br>経営者をサポート</p></div>
   </div>
   <div class="card gold" data-s="5" style="margin-top:20px;padding:18px 26px"><div class="v" style="font-size:32px">決定的な瞬間は、ない。じわじわ変わった。<br>だから、型にすれば、だれでも再現できる。</div></div>
 </section>
 
-<!-- 11 数字 -->
 <section class="slide tint" data-sec="0">
   <div class="row grow" style="gap:46px;align-items:center">
     <div class="photo pop" style="flex:0 0 360px;height:450px;box-shadow:0 14px 34px rgba(10,90,98,.2)"><img src="img/morikawa.jpg" alt="森川満章"></div>
@@ -574,29 +694,53 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
         <div class="card" style="flex:1;padding:16px 18px;gap:2px"><div class="k">企業研修</div><div class="big num" style="font-size:60px"><span data-count="25">25</span><small>社</small></div></div>
       </div>
       <h1 class="r" style="--i:2;margin-top:24px;font-size:46px">AIは、自分の会社で<br><em class="c">毎日動かしている側</em>です。</h1>
-      <p class="lead r" style="--i:3">研修でお話ししてきたのは、おもにお金のこと。<br>今日は、うちの会社の中身をそのまま持ってきました。</p>
+      <p class="lead r" style="--i:3">お金のプロとして、経営者・社長を<br>サポートしています。<br>今日は、うちの会社の中身をそのまま持ってきました。</p>
     </div>
   </div>
 </section>
 
-<!-- 12 1日の時計 -->
-<section class="slide tint" data-sec="1">
-  <span class="eyebrow r">fulfullの1日</span>
-  <h1 class="r" style="--i:1;font-size:46px">人が頼まなくても、<em>時間が来たらAIが始めます</em>。</h1>
-  <div class="clock">
-    <div class="ck r" style="--i:2"><time>3:40</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H4zM9 20h6M12 16v4"/></svg></span><b>面談の録画から、議事録</b></div>
-    <div class="ck r" style="--i:3"><time>6:50</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0M12 8v4l3 2"/></svg></span><b>SNS 6媒体を点検して報告</b></div>
-    <div class="ck r" style="--i:4"><time>7:00</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 9h8M8 13h8M8 17h5"/></svg></span><b>今日やることを、1枚に</b></div>
-    <div class="ck r" style="--i:5"><time>7:20</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></span><b>広告の数字を、信号で報告</b></div>
-    <div class="ck r" style="--i:6"><time>朝昼夕</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM16 8a5 5 0 0 1 0 8"/></svg></span><b>SNSに、自動で投稿</b></div>
-    <div class="ck r" style="--i:7"><time>月水金</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h4"/></svg></span><b>ホームページのコラムを公開</b></div>
-    <div class="ck r" style="--i:8"><time>日中</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></span><b>LINEの質問に、AIがまず答える</b></div>
-    <div class="ck r" style="--i:9"><time>毎晩</time><span class="ic"><svg viewBox="0 0 24 24"><path d="M4 19h16M7 16l4-5 3 3 4-7"/></svg></span><b>申込みと売上を集計</b></div>
+<section class="slide night" data-sec="1" data-steps="4">
+  <div class="sky"><i class="on">夜中〜早朝</i><i>朝</i><i>昼〜夜</i></div>
+  <span class="eyebrow r">fulfullの1日 ①</span>
+  <h1 class="r" style="--i:1;font-size:46px">人が寝ている間に、<em class="c">AIはもう働いています</em>。</h1>
+  <div class="dys">
+    <div class="dy fx" data-stp="1"><time>3:13</time><div><b>ホームページの見回り</b><span>勉強会の次の日程を、ページに反映する。</span></div></div>
+    <div class="dy fx" data-stp="2"><time>4:20</time><div><b>記事の企画と、下書き</b><span>次に書く記事を決めて、下書きまで作る。</span></div></div>
+    <div class="dy fx" data-stp="3"><time>6:30</time><div><b>営業メールの準備</b><span>送る相手ごとに文を作り、別のAIが点検する。</span></div></div>
+    <div class="dy fx" data-stp="4"><time>7:30</time><div><b>経済ニュースと、朝の便り</b><span>前日の株価とニュースをまとめて、LINEに届ける。</span></div></div>
   </div>
-  <p class="note r" style="--i:10;margin-top:14px;font-size:25px;font-weight:700">AIのチームは3つ、役割は36。SNS・広告・ホームページを受け持っています。</p>
+  <span class="hint">→ で1つずつ</span>
 </section>
 
-<!-- 13 グラフ -->
+<section class="slide" data-sec="1" data-steps="4">
+  <div class="sky"><i>夜中〜早朝</i><i class="on">朝</i><i>昼〜夜</i></div>
+  <span class="eyebrow r">fulfullの1日 ②</span>
+  <h1 class="r" style="--i:1;font-size:46px">朝、仕事を始める前に、<em class="c">報告がそろっています</em>。</h1>
+  <div class="dys">
+    <div class="dy fx" data-stp="1"><time>6:50</time><div><b>SNS 6媒体の点検</b><span>数字と、出してはいけない言葉を見回る。</span></div></div>
+    <div class="dy fx" data-stp="2"><time>7:00</time><div><b>今日やることを、1枚に</b><span>社長が決めること上位3つと、今日動く仕事。</span></div></div>
+    <div class="dy fx" data-stp="3"><time><small>月水金</small>7:07</time><div><b>ホームページのコラムを公開</b><span>書いて、点検して、公開するところまで。</span></div></div>
+    <div class="dy fx" data-stp="4"><time>7:20</time><div><b>広告と申込みの数字を、信号で報告</b><span>青・黄・赤。決めてほしいことは1つに絞る。</span></div></div>
+  </div>
+  <span class="hint">→ で1つずつ</span>
+</section>
+
+<section class="slide tint" data-sec="1" data-steps="6">
+  <div class="sky"><i>夜中〜早朝</i><i>朝</i><i class="on">昼〜夜</i></div>
+  <span class="eyebrow r">fulfullの1日 ③</span>
+  <h1 class="r" style="--i:1;font-size:46px">昼も夜も、<em class="c">発信と営業は止まりません</em>。</h1>
+  <div class="dys c2">
+    <div class="dy fx" data-stp="1"><time><small>朝・昼・夕</small>3本</time><div><b>SNSに、自動で投稿</b><span>7:30・12:10・17:10 に、Threadsへ。</span></div></div>
+    <div class="dy fx" data-stp="2"><time>10:05</time><div><b>営業メールを送る</b><span>きょうは15社へ。13:05にも。</span></div></div>
+    <div class="dy fx" data-stp="3"><time><small>1日3回</small>12:00</time><div><b>営業先のリスト出し</b><span>会社を集めて、A・B・Cで判定する。</span></div></div>
+    <div class="dy fx" data-stp="4"><time>20:00</time><div><b>動画を作って、投稿</b><span>InstagramとYouTubeへ。週4回。</span></div></div>
+    <div class="dy fx" data-stp="5"><time>23:00</time><div><b>その日の販売を記録</b><span>売れた分を、台帳と一覧表に。</span></div></div>
+    <div class="dy fx" data-stp="6"><time style="font-size:27px">いつでも</time><div><b>LINEの質問に、AIがまず答える</b><span>答えられないものだけ、人に回す。</span></div></div>
+  </div>
+  <p class="note r" style="--i:3;margin-top:12px;font-size:23px;font-weight:700">AIのチームは3つ、役割は36。SNS・広告・ホームページを受け持っています。</p>
+  <span class="hint">→ で1つずつ</span>
+</section>
+
 <section class="slide" data-sec="1" data-steps="3">
   <span class="eyebrow r">人が「やって」と言わなくても、AIが自動でやる仕事の数</span>
   <h1 class="r" style="--i:1;font-size:46px;white-space:nowrap">1つずつ任せて、いま<em class="c">43の仕事</em>が自動で動いています。</h1>
@@ -609,24 +753,18 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
   </div>
 </section>
 
-<!-- 14 外注換算 -->
 <section class="slide" data-sec="1">
   <span class="eyebrow r">AIと作ってきたものを、外注に出したら</span>
   <div class="row grow" style="gap:30px;align-items:center">
     <div class="col" style="flex:1.1">
       <div class="note r" style="--i:1;font-size:26px;font-weight:900;color:var(--coral)">外注相場のいちばん安いところで計算して</div>
-      <div class="big cr num r" style="--i:1;font-size:150px;line-height:1.05">月<span data-count="160">160</span><small>万円分</small></div>
-      <div class="row r" style="--i:2;align-items:flex-end;gap:22px;margin-top:22px">
-        <div class="ppl"><svg viewBox="0 0 40 60"><circle cx="20" cy="12" r="10" fill="#0E7C86"/><path d="M4 58c0-18 6-30 16-30s16 12 16 30z" fill="#0E7C86"/></svg><svg viewBox="0 0 40 60"><circle cx="20" cy="12" r="10" fill="#0E7C86"/><path d="M4 58c0-18 6-30 16-30s16 12 16 30z" fill="#0E7C86"/></svg><svg viewBox="0 0 40 60"><circle cx="20" cy="12" r="10" fill="#0E7C86"/><path d="M4 58c0-18 6-30 16-30s16 12 16 30z" fill="#0E7C86"/></svg><svg viewBox="0 0 40 60"><circle cx="20" cy="12" r="10" fill="#0E7C86"/><path d="M4 58c0-18 6-30 16-30s16 12 16 30z" fill="#0E7C86"/></svg></div>
-        <div class="big num" style="font-size:84px">約<span data-count="4">4</span><small>人分</small></div>
-      </div>
-      <p class="note r" style="--i:3;margin-top:14px;font-size:23px;font-weight:700;line-height:1.5">ページ22本・記事252本・自動の仕組み15本などを、1か月あたりに直した額。<br>人数は、月給30万円の社員さんの人件費に直した数です。</p>
+      <div class="big num redout r" style="--i:1;font-size:170px;line-height:1.05">月<span data-count="160">160</span><small>万円分</small></div>
+      <p class="note r" style="--i:3;margin-top:22px;font-size:25px;font-weight:700;line-height:1.55">ページ22本・記事252本・自動の仕組み15本などを、<br>1か月あたりに直した金額です。</p>
     </div>
     <img class="pop" src="img/v2_four.jpg" alt="" style="--i:2;flex:0 0 470px;width:470px;border-radius:30px;box-shadow:0 14px 34px rgba(10,90,98,.18)">
   </div>
 </section>
 
-<!-- 15 使う vs 自動 -->
 <section class="slide tint" data-sec="1">
   <span class="eyebrow r">今日いちばんお伝えしたいこと</span>
   <h1 class="r" style="--i:1;font-size:46px">AIを「使う」と、<br>仕事が<em class="c">「自動で回る」</em>は、別ものです。</h1>
@@ -641,207 +779,236 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
   </div>
 </section>
 
-<!-- 16 実演の扉 -->
+<section class="slide" data-sec="1" data-steps="2">
+  <span class="eyebrow r">よくあるAI研修との、ちがい</span>
+  <h1 class="r" style="--i:1;font-size:44px">なぜ、市役所や法人会から、<br>「うちでも話してほしい」と声がかかるのか。</h1>
+  <div class="row" style="gap:22px;margin-top:22px;align-items:stretch">
+    <div class="card r" style="--i:2;flex:1;padding:18px 22px"><div class="k" style="font-size:22px">よくある研修のあと</div><div class="v" style="font-size:30px">「勉強になった」で、<br>終わる。</div><div class="d" style="font-size:22px">次の日からは、いつもの仕事に戻る。</div></div>
+    <div class="garrow" style="align-self:center">▶</div>
+    <div class="card" data-s="1" style="flex:1.15;padding:18px 22px;border-color:var(--coral);background:#FFF6F1;box-shadow:0 0 0 6px rgba(232,115,74,.14)"><div class="k" style="font-size:22px;color:var(--coral)">fulfullの研修のあと</div><div class="v" style="font-size:32px">自動で回る仕組みが、<br><em class="c">会社に1つ残る</em>。</div><div class="d" style="font-size:22px;color:var(--ink)">研修の中で、自分の会社の仕事を1つ、実際に動かすところまでやります。</div></div>
+  </div>
+  <p class="lead" data-s="2" style="font-size:27px;color:var(--ink)">これから、その「自動で回る」を、目の前でお見せします。</p>
+</section>
+
 <section class="slide bleed" data-sec="2">
   <img class="bg" src="img/v2_four.jpg" alt="" style="object-position:center 40%">
   <div class="veil" style="background:linear-gradient(180deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.80) 30%,rgba(255,255,255,0) 52%,rgba(255,255,255,0) 72%,rgba(255,255,255,.95) 100%)"></div>
   <div class="inner" style="justify-content:space-between;padding:44px 76px 90px">
     <div>
       <span class="sticker r">ここから実演です</span>
-      <h1 class="r" style="--i:1;margin-top:14px;font-size:58px">4つの仕事を、<em class="c">同時に</em>動かします。</h1>
+      <h1 class="r" style="--i:1;margin-top:14px;font-size:58px">AIが仕事をするところを、<em class="c">目の前で</em>。</h1>
     </div>
     <div class="four">
-      <div class="c pop" style="--i:2"><b>議事録</b><span>打ち合わせの録音から</span></div>
+      <div class="c pop" style="--i:2"><b>議事録と経営の地図</b><span>さっき、声で頼んだもの</span></div>
       <div class="c pop" style="--i:3"><b>請求書</b><span>宛先と金額を言うだけ</span></div>
-      <div class="c pop" style="--i:4"><b>SNSの発信</b><span>今日のメモから3本</span></div>
+      <div class="c pop" style="--i:4"><b>SNSの発信</b><span>Threadsに投稿まで</span></div>
       <div class="c pop" style="--i:5"><b>広告の報告</b><span>うちの本物の数字で</span></div>
     </div>
   </div>
 </section>
 
-<!-- 17 議事録 -->
 <section class="slide" data-sec="2">
-  <span class="eyebrow r">実演 1｜さっき頼んだ議事録</span>
-  <h1 class="r" style="--i:1;font-size:42px;white-space:nowrap">打ち合わせが終わったら、<em class="c">議事録はもうできている</em>。</h1>
+  <span class="eyebrow r">実演 1｜さっき、声で頼んだもの</span>
+  <h1 class="r" style="--i:1;font-size:42px;white-space:nowrap">打ち合わせが、<em class="c">議事録と「経営の地図」</em>になりました。</h1>
   <div class="row" style="gap:28px;margin-top:16px;align-items:flex-start">
-    <div class="shot pop" style="--i:2;flex:0 0 400px;height:430px"><img src="img/demo_gijiroku.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">出てくるもの</span></div>
+    <div class="shot pop" style="--i:2;flex:0 0 560px;height:430px"><img src="img/demo_chizu.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">出てくるもの</span></div>
     <div class="col" style="flex:1">
-      <div class="io out r" style="--i:3;padding:10px 18px"><ul class="two"><li>決めたこと</li><li>宿題（だれが・いつまでに）</li><li>次回の予定</li><li>お礼メールの下書き</li></ul></div>
-      <div class="prompt sm r" style="--i:4;margin-top:24px;font-size:19px;line-height:1.5">「01_議事録」フォルダにある、Zoomの文字起こし（文字起こし_Aさん.txt）を読んでください。<br>そこから議事録を作ってください。中身は「決めたこと」「宿題（だれが・いつまでに）」「次回」の3つです。<br>あわせて、Aさんに送るお礼メールの下書きも作ってください。メールは送らず、文面を作るだけです。<br>できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。</div>
+      <div class="io out r" style="--i:3;padding:12px 18px"><ul><li>決めたこと・宿題・次回</li><li>法人設立までの道のりが、1枚の地図に</li><li>お礼の文の下書き</li></ul></div>
+      <div class="voice sm r" style="--i:4;margin-top:16px"><span class="mic"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg></span><div><div class="k">頼んだのは、このひとこと</div><p>「きのうの、ながたかさんとの<br>打ち合わせを、<br>議事録と経営の地図にして」</p></div></div>
       <div class="row r" style="--i:5;gap:14px;margin-top:14px;align-items:center">
-        <button class="ui cp" data-copy="「01_議事録」フォルダにある、Zoomの文字起こし（文字起こし_Aさん.txt）を読んでください。&#10;そこから議事録を作ってください。中身は「決めたこと」「宿題（だれが・いつまでに）」「次回」の3つです。&#10;あわせて、Aさんに送るお礼メールの下書きも作ってください。メールは送らず、文面を作るだけです。&#10;できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。">この文をコピー</button>
-        <span class="note" style="font-size:20px;font-weight:900">6枚目で頼んだ文と同じです</span>
+        <button class="ui cp" data-copy="きのうの、ながたかさんとの打ち合わせを、議事録と経営の地図にして">この文をコピー</button>
+        <span class="note" style="font-size:20px;font-weight:900">声が通らないときは、貼っても同じです</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 18 請求書 -->
 <section class="slide" data-sec="2">
   <span class="eyebrow r">実演 2｜請求書</span>
   <h1 class="r" style="--i:1;font-size:42px;white-space:nowrap">見本を1回見せたら、あとは<em class="c">宛先と金額を言うだけ</em>。</h1>
   <div class="row" style="gap:28px;margin-top:16px;align-items:flex-start">
-    <div class="shot pop" style="--i:2;flex:0 0 400px;height:430px"><img src="img/demo_seikyu.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">出てくるもの</span></div>
+    <div class="shot pop" style="--i:2;flex:0 0 400px;height:430px"><img src="img/demo_seikyu2.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">出てくるもの</span></div>
     <div class="col" style="flex:1">
       <div class="io out r" style="--i:3;padding:10px 18px"><ul class="two"><li>いつもの形の請求書</li><li>消費税と合計の計算</li><li>請求日・支払期日</li><li>請求番号</li></ul></div>
-      <div class="prompt sm r" style="--i:4;margin-top:24px;font-size:19px;line-height:1.5">「02_請求書」フォルダの 会社メモ.md と 請求書_見本.html を見て、同じ書式で請求書を1枚作ってください。<br>宛先は「株式会社サンプル製作所 御中」、件名は「AI研修費（全4回）」、金額は 800,000円（税別）です。<br>請求日は今日、支払期日は12月末にしてください。<br>先方には送らず、作るだけです。<br>できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。</div>
-      <div class="row r" style="--i:5;gap:14px;margin-top:14px;align-items:center">
-        <button class="ui cp" data-copy="「02_請求書」フォルダの 会社メモ.md と 請求書_見本.html を見て、同じ書式で請求書を1枚作ってください。&#10;宛先は「株式会社サンプル製作所 御中」、件名は「AI研修費（全4回）」、金額は 800,000円（税別）です。&#10;請求日は今日、支払期日は12月末にしてください。&#10;先方には送らず、作るだけです。&#10;できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。">この文をコピー</button>
+      <div class="prompt r" style="--i:4;margin-top:30px;font-size:27px;line-height:1.6">請求書を作って。<br>宛先は株式会社オルテンシア・ワークス、<br>AI研修費（全4回）、80万円（税別）。</div>
+      <div class="row r" style="--i:5;gap:14px;margin-top:18px;align-items:center">
+        <button class="ui cp" data-copy="請求書を作って。&#10;宛先は株式会社オルテンシア・ワークス、&#10;AI研修費（全4回）、80万円（税別）。">この文をコピー</button>
         <span class="note" style="font-size:20px;font-weight:900">コピー → 画面を切り替える → Claudeに貼る</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 19 SNS -->
 <section class="slide" data-sec="2">
   <span class="eyebrow r">実演 3｜SNSの発信</span>
-  <h1 class="r" style="--i:1;font-size:42px;white-space:nowrap">今日のメモ5行から、<em class="c">3つの媒体の下書き</em>。</h1>
+  <h1 class="r" style="--i:1;font-size:42px;white-space:nowrap">下書きを3つ作って、<em class="c">Threadsには、そのまま投稿</em>。</h1>
   <div class="row" style="gap:28px;margin-top:16px;align-items:flex-start">
-    <div class="shot pop" style="--i:2;flex:0 0 400px;height:430px"><img src="img/demo_sns.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">出てくるもの</span></div>
+    <div class="shot pop" style="--i:2;flex:0 0 400px;height:430px"><img src="img/demo_sns2.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">出てくるもの</span></div>
     <div class="col" style="flex:1">
-      <div class="io out r" style="--i:3;padding:10px 18px"><ul class="two"><li>Threads用</li><li>Instagram用</li><li>Facebook用</li><li>うちの話し方で</li></ul></div>
-      <div class="prompt sm r" style="--i:4;margin-top:24px;font-size:19px;line-height:1.5">「03_SNS発信」フォルダの きょうのメモ.txt に、今日あった出来事を書きました。<br>会社メモ.md にある、うちの話し方と「出さない話題」を守って、SNSの下書きを3本作ってください。<br>Threads用、Instagram用、Facebook用の3つです。それぞれの場に合う長さと書き方にしてください。<br>投稿はせず、下書きを作るだけです。<br>できたら、3本を見比べられる1枚にして、ブラウザで開ける形で同じフォルダに保存して、開いてください。</div>
-      <div class="row r" style="--i:5;gap:14px;margin-top:14px;align-items:center">
-        <button class="ui cp" data-copy="「03_SNS発信」フォルダの きょうのメモ.txt に、今日あった出来事を書きました。&#10;会社メモ.md にある、うちの話し方と「出さない話題」を守って、SNSの下書きを3本作ってください。&#10;Threads用、Instagram用、Facebook用の3つです。それぞれの場に合う長さと書き方にしてください。&#10;投稿はせず、下書きを作るだけです。&#10;できたら、3本を見比べられる1枚にして、ブラウザで開ける形で同じフォルダに保存して、開いてください。">この文をコピー</button>
-        <span class="note" style="font-size:20px;font-weight:900">コピー → 画面を切り替える → Claudeに貼る</span>
+      <div class="io out r" style="--i:3;padding:10px 18px"><ul class="two"><li>Threads用</li><li>Instagram用</li><li>Facebook用</li><li>Threadsは投稿まで</li></ul></div>
+      <div class="prompt r" style="--i:4;margin-top:30px;font-size:27px;line-height:1.6">今日のセミナーのことを、<br>SNSの下書きにして。<br>Threadsは投稿まで。</div>
+      <div class="row r" style="--i:5;gap:14px;margin-top:18px;align-items:center">
+        <button class="ui cp" data-copy="今日のセミナーのことを、&#10;SNSの下書きにして。&#10;Threadsは投稿まで。">この文をコピー</button>
+        <span class="note" style="font-size:20px;font-weight:900">Threadsの画面で、AIが文字を打ち始めます</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 19b 広告 -->
 <section class="slide" data-sec="2">
   <span class="eyebrow r">実演 4｜広告の報告（fulfullの本物の数字）</span>
-  <h1 class="r" style="--i:1;font-size:42px;white-space:nowrap">広告の数字から、<em class="c">社長向けの「けさの報告」</em>。</h1>
+  <h1 class="r" style="--i:1;font-size:42px;white-space:nowrap">毎朝、<em class="c">社長にも従業員にも読める報告</em>が届きます。</h1>
   <div class="row" style="gap:28px;margin-top:16px;align-items:flex-start">
-    <div class="shot pop" style="--i:2;flex:0 0 400px;height:430px"><img src="img/demo_koukoku.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">出てくるもの</span></div>
+    <div class="shot pop" style="--i:2;flex:0 0 620px;height:440px"><img src="img/demo_koukoku2.png" alt=""><span class="sticker" style="position:absolute;right:-14px;top:-16px;font-size:20px">けさの報告</span></div>
     <div class="col" style="flex:1">
-      <div class="io out r" style="--i:3;padding:10px 18px"><ul class="two"><li>信号の色</li><li>目標に届いたか</li><li>良かった点・気になる点</li><li>今日決めること1つ</li></ul></div>
-      <div class="prompt sm r" style="--i:4;margin-top:24px;font-size:19px;line-height:1.5">「04_広告の報告」フォルダに、うちの会社が実際に出している広告の数字があります（目標と結果.md と、csvが2つ）。<br>これを読んで、社長向けの「けさの報告」を1枚にまとめてください。<br>入れるのは、信号の色（青・黄・赤）、目標に届いたか、良かった点、気になる点、今日決めること1つ、です。<br>専門用語は使わず、数字が苦手な社長でも30秒で分かるように。グラフも入れて、見て楽しい1枚にしてください。<br>できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。</div>
-      <div class="row r" style="--i:5;gap:14px;margin-top:14px;align-items:center">
-        <button class="ui cp" data-copy="「04_広告の報告」フォルダに、うちの会社が実際に出している広告の数字があります（目標と結果.md と、csvが2つ）。&#10;これを読んで、社長向けの「けさの報告」を1枚にまとめてください。&#10;入れるのは、信号の色（青・黄・赤）、目標に届いたか、良かった点、気になる点、今日決めること1つ、です。&#10;専門用語は使わず、数字が苦手な社長でも30秒で分かるように。グラフも入れて、見て楽しい1枚にしてください。&#10;できたら、ブラウザで開ける形で同じフォルダに保存して、開いてください。">この文をコピー</button>
-        <span class="note" style="font-size:20px;font-weight:900">コピー → 画面を切り替える → Claudeに貼る</span>
-      </div>
+      <div class="io out r" style="--i:3;padding:14px 18px"><ul><li>信号の色と、目標に届いたか</li><li>広告を知らなくても分かる読み方</li><li>「次は、こうしましょう」の提案</li></ul></div>
+      <p class="lead r" style="--i:4;font-size:25px;color:var(--ink);margin-top:16px">数字を読んで、次の手を考えるところまで、<br>AIが下書きします。</p>
+      <div class="row r" style="--i:5;margin-top:16px"><a class="ui cp" href="https://mm738966m-boop.github.io/midori-seminar/koukoku/" target="_blank" rel="noopener" style="text-decoration:none">報告のページを開く</a></div>
     </div>
   </div>
 </section>
 
-<!-- 20 切り替え -->
 <section class="slide tint center" data-sec="2">
-  <span class="sticker r" style="align-self:center;font-size:28px">4つ同時に、スタート</span>
+  <span class="sticker r" style="align-self:center;font-size:28px">請求書とSNS、続けて頼みます</span>
   <h1 class="hero r" style="--i:1;margin-top:22px">ここから、<br><em class="c">実際の画面</em>に切り替えます。</h1>
-  <p class="lead r" style="--i:2;font-size:30px">貼るのは、いまお見せした文だけです。<br>出来上がりは、1分ほどで画面に開きます。</p>
+  <p class="lead r" style="--i:2;font-size:30px">貼るのは、いまお見せした短い文だけです。<br>Threadsの画面にも、ご注目ください。</p>
 </section>
 
-<!-- 22 塗り分け -->
-<section class="slide" data-sec="3">
-  <span class="eyebrow r">任せるのは、仕事の「一部」です</span>
-  <h1 class="r" style="--i:1">議事録なら、<em>AIがやるのはここ</em>。</h1>
-  <div class="flow5">
-    <div class="f5 hu r" style="--i:2">話を聞く<small>人</small></div>
-    <div class="f5 ai r" style="--i:3">文字に<br>起こす<small>AI</small></div>
-    <div class="f5 ai r" style="--i:4">要点を<br>まとめる<small>AI</small></div>
-    <div class="f5 ai r" style="--i:5">形に<br>整える<small>AI</small></div>
-    <div class="f5 hu r" style="--i:6">確かめて<br>出す<small>人</small></div>
+<section class="slide" data-sec="3" data-steps="6">
+  <span class="eyebrow r">議事録の仕事を、分けてみると</span>
+  <h1 class="r" style="--i:1;font-size:44px">人がやるのは、<em>「話す」ところだけ</em>になります。</h1>
+  <div class="flow5 det">
+    <div class="f5 hu fx" data-stp="1">話を聞く<small>人</small><p>対面でも<br>オンラインでも</p></div>
+    <div class="f5 ai fx" data-stp="2">文字に<br>起こす<small>AI</small><p>録画でも<br>録音でも</p></div>
+    <div class="f5 ai fx" data-stp="3">要点を<br>まとめる<small>AI</small><p>決めたこと・宿題<br>次回に仕分ける</p></div>
+    <div class="f5 ai fx" data-stp="4">形に<br>整える<small>AI</small><p>いつもの書式で<br>1枚にする</p></div>
+    <div class="f5 hu fx" data-stp="5">確かめて<br>出す<small>はじめは人</small><p>社長か担当者<br>慣れたらAIに</p></div>
   </div>
-  <div class="meter r" style="--i:7"><i></i></div>
-  <div class="row r" style="--i:8;margin-top:14px;gap:22px;align-items:center">
-    <div class="big num" style="font-size:80px">約6<small>割</small></div>
-    <p class="lead" style="margin-top:0">かかっていた時間の約6割を、AIに任せられます。<br>たたき台まで任せる仕事（提案書や発信）は、約3割で計算します。</p>
+  <div class="row" data-s="6" style="margin-top:18px;gap:24px;align-items:center">
+    <div class="big num redout" style="font-size:92px;flex:0 0 auto">99<small>%</small></div>
+    <p class="lead" style="margin-top:0;font-size:25px;color:var(--ink)">fulfullでは、Zoomが終わったら、最後まで自動です。<br>議事録づくりのほぼ全部を、AIが整えています。<br><span style="font-size:.84em;color:var(--ink2)">お手元のシートは、はじめの一歩として、控えめに60%で計算します。</span></p>
   </div>
+  <span class="hint">→ で1つずつ</span>
 </section>
 
-<!-- 23 決める3つ -->
 <section class="slide tint" data-sec="3">
   <span class="eyebrow r">会社で使う前に</span>
   <h1 class="r" style="--i:1">先に決めておく、<em>3つのこと</em>。</h1>
   <div class="cards c3" style="margin-top:26px">
     <div class="card fill r" style="--i:2"><span class="badge gold">1</span><div class="v">入れた情報を、<br>学習に使わせない</div><div class="d">そういう設定があります。<br>会社で使うなら、会社向けの契約が安心です。</div></div>
     <div class="card r" style="--i:3"><span class="badge">2</span><div class="v">数字と名前は、<br>人が確かめる</div><div class="d">金額、日付、会社名。<br>ここはAIも間違えます。</div></div>
-    <div class="card r" style="--i:4"><span class="badge">3</span><div class="v">送る前に、<br>人が読む</div><div class="d">AIの文を、そのまま外に出さない。<br>最後に読むのは担当の人です。</div></div>
+    <div class="card r" style="--i:4"><span class="badge">3</span><div class="v">はじめは、<br>送る前に人が読む</div><div class="d">最初のうちは、担当の人が読んでから外へ。<br>慣れてきたら、完全自動にもできます。</div></div>
   </div>
 </section>
 
-<!-- 24 助成金 -->
-<section class="slide" data-sec="3">
+<section class="slide" data-sec="3" data-steps="2">
   <span class="eyebrow r">知っておくと役に立つ制度｜人材開発支援助成金</span>
-  <h1 class="r" style="--i:1;font-size:44px">社員がAIを学ぶ費用に、<em>国の助成</em>を受けられます。</h1>
-  <div class="row" style="margin-top:20px;gap:24px">
-    <div class="card gold r" style="--i:2;flex:0 0 360px;align-items:center;text-align:center;justify-content:center"><div class="k">中小企業なら、経費の最大</div><div class="big gd num" style="font-size:120px"><span data-count="75">75</span><small>%</small></div><div class="d" style="color:var(--ink)">＋ 受講した時間分の賃金の一部</div></div>
-    <div class="col" style="flex:1;gap:12px">
-      <div class="card r" style="--i:3;padding:16px 22px;flex-direction:row;align-items:center;gap:18px"><span class="pill solid" style="flex:0 0 auto">来年度も</span><div class="d" style="color:var(--ink);font-size:24px">助成金そのものは、来年度も続く見通しです。</div></div>
-      <div class="card r" style="--i:4;padding:16px 22px;flex-direction:row;align-items:center;gap:18px;border-color:var(--coral);background:#FFF6F1"><span class="pill" style="flex:0 0 auto;background:var(--coral);color:#fff">75%の枠</span><div class="d" style="color:var(--ink);font-size:24px">この手厚い枠は、令和8年度まで。</div></div>
-      <div class="card r" style="--i:5;padding:16px 22px;flex-direction:row;align-items:center;gap:18px"><span class="pill solid" style="flex:0 0 auto">手続き</span><div class="d" style="color:var(--ink);font-size:24px">計画届は、訓練を始める1か月前まで。<br>3月に始めるなら、2月末が目安です。</div></div>
+  <h1 class="r" style="--i:1;font-size:44px">従業員がAIを学ぶ費用に、<em>国の助成</em>を受けられます。</h1>
+  <div class="row" style="margin-top:18px;gap:22px;align-items:stretch">
+    <div class="card gold r" style="--i:2;flex:0 0 330px;align-items:center;text-align:center;justify-content:center;padding:14px"><div class="k">いま（令和8年度まで）</div><div class="k" style="margin-top:6px">中小企業なら、経費の最大</div><div class="big gd num" style="font-size:112px;line-height:1.05"><span data-count="75">75</span><small>%</small></div><div class="d" style="color:var(--ink)">＋ 受講した時間分の賃金の一部</div></div>
+    <div class="col" style="flex:1;gap:10px">
+      <div class="card" data-s="1" style="padding:14px 20px;gap:6px;border-color:var(--coral);background:#FFF6F1">
+        <div class="row" style="gap:12px;align-items:center"><span class="pill" style="flex:0 0 auto;background:var(--coral);color:#fff">令和9年度の案</span><div style="font-size:25px;font-weight:900">助成金は、その先も続く見通しです。</div></div>
+        <ul class="an">
+          <li>国の予算の要求は、<b>539億円 → 602億円</b>に増額</li>
+          <li>コースは「訓練実施」「休暇制度導入」の<b>2本立て</b>にする案</li>
+          <li>ふつうの訓練は、経費の<b>45%</b>（賃上げなどで<b>60%</b>）の案</li>
+        </ul>
+        <div class="note" style="font-size:19px;font-weight:700">いまは国の要求の段階で、決まるのは12月の予算案と来春です。</div>
+      </div>
+      <div class="card" data-s="2" style="padding:12px 20px;flex-direction:row;align-items:center;gap:16px"><span class="pill solid" style="flex:0 0 auto">手続き</span><div class="d" style="color:var(--ink);font-size:22px">計画届は、訓練を始める1か月前まで。<br>ご相談は、顧問の社会保険労務士さんか労働局へ。</div></div>
     </div>
   </div>
-  <p class="note r" style="--i:6;margin-top:12px;font-size:23px;font-weight:700;line-height:1.5">対象は雇用保険に入っている社員の訓練で、内容にも条件があります。<br>相談と申請は、顧問の社会保険労務士さん、または労働局へ。</p>
 </section>
 
-<!-- 25 逆算 -->
-<section class="slide bleed" data-sec="3" data-steps="2">
-  <img class="bg" src="img/v2_goal.jpg" alt="" style="object-position:left center">
-  <div class="veil r" style="background:linear-gradient(270deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.92) 40%,rgba(255,255,255,0) 66%)"></div>
-  <div class="inner rt"><div class="box" style="max-width:610px">
-    <span class="sticker gold r">うまく回る会社のコツ 1</span>
-    <h1 class="r" style="--i:1;margin-top:16px;font-size:60px">先に、<em class="c">ゴール</em>を決める。</h1>
-    <div class="vs" style="grid-template-columns:1fr;gap:12px;margin-top:18px">
-      <div class="p" data-s="1" style="padding:14px 20px"><span class="tag">よくある始め方</span><h3 style="font-size:26px">「まず、AIを使ってみよう」</h3><ul><li style="font-size:22px">行き先がないまま、積み上げていく</li></ul></div>
-      <div class="p good" data-s="2" style="padding:14px 20px"><span class="tag">うまく回る始め方</span><h3 style="font-size:26px">「この仕事を、こう動かしたい」</h3><ul><li style="font-size:22px">ゴールを先にAIに伝えて、逆算する</li><li style="font-size:22px">決めるのは、経営者か責任者</li></ul></div>
+<section class="slide" data-sec="3" data-steps="2">
+  <span class="sticker gold r">うまく回る会社のコツ 1</span>
+  <h1 class="r" style="--i:1;margin-top:14px;font-size:56px">先に、<em class="c">ゴール</em>を決める。</h1>
+  <div class="row" style="gap:26px;margin-top:20px;align-items:stretch">
+    <div class="kz bad" data-s="1">
+      <span class="batsu">✕</span>
+      <img src="img/v3_cry.jpg" alt="">
+      <div><span class="tag">よくある始め方</span><h3>「まず、AIを<br>使ってみよう」</h3><p>行き先がないまま、<br>積み上げていく。</p></div>
     </div>
-  </div></div>
+    <div class="kz good" data-s="2">
+      <span class="maru">◎</span>
+      <img src="img/v2_goal.jpg" alt="">
+      <div><span class="tag">うまく回る始め方</span><h3>「この仕事を、<br>こう動かしたい」</h3><p class="blink" style="white-space:nowrap;font-size:23px">ゴールから、逆算する。</p><p>決めるのは、<br>経営者か責任者。</p></div>
+    </div>
+  </div>
 </section>
 
-<!-- 26 育てる -->
-<section class="slide" data-sec="3">
-  <div class="row grow" style="gap:40px;align-items:center">
-    <img class="pop" src="img/v2_grow.jpg" alt="" style="flex:0 0 400px;width:400px;border-radius:30px;box-shadow:0 14px 34px rgba(10,90,98,.18)">
-    <div class="col" style="flex:1">
+<section class="slide" data-sec="3" data-steps="2">
+  <div class="row grow" style="gap:36px;align-items:center">
+    <div class="col" style="flex:0 0 520px">
       <span class="sticker gold r">うまく回る会社のコツ 2</span>
       <h1 class="r" style="--i:1;margin-top:16px;font-size:58px">だめなら、<em class="c">直すだけ</em>。</h1>
-      <p class="lead r" style="--i:2">1回目から、うまくはいきません。<br>直すたびに、AIはその会社の仕事を覚えていきます。<br>新人さんを育てるのと、同じ感覚です。</p>
-      <div class="card r" style="--i:3;margin-top:18px;padding:16px 22px;border-color:var(--coral);background:#FFF6F1"><div class="v" style="font-size:30px">1回目でやめてしまうのが、<br>いちばんもったいない。</div></div>
+      <p class="lead r" style="--i:2;font-size:25px">1回目から、うまくはいきません。<br>直すたびに、AIは会社の仕事を覚えます。<br>新人さんを育てるのと、同じ感覚です。</p>
+      <div class="card" data-s="2" style="margin-top:16px;padding:14px 20px;border-color:var(--coral);background:#FFF6F1"><div class="v" style="font-size:27px">途中でやめるのは、<em class="c">機会損失</em>。<br>これから先の時間と利益を、<br>手放すことになります。</div></div>
+    </div>
+    <div class="col" style="flex:1" data-s="1">
+      <svg class="loss" viewBox="0 0 600 430">
+        <defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F39A75" stop-opacity=".55"/><stop offset="1" stop-color="#F39A75" stop-opacity=".12"/></linearGradient></defs>
+        <line x1="50" y1="380" x2="580" y2="380" stroke="#12393D" stroke-width="4"/><line x1="50" y1="30" x2="50" y2="380" stroke="#12393D" stroke-width="4"/>
+        <path d="M50 340 L170 322 L170 380 L580 380 L580 70 C440 120 300 250 170 322 Z" fill="url(#lg)" class="area"/>
+        <path d="M50 340 L170 322 C300 250 440 120 580 70" fill="none" stroke="#0E7C86" stroke-width="9" stroke-linecap="round" class="ln"/>
+        <path d="M170 322 L250 352 L580 352" fill="none" stroke="#9DB3B6" stroke-width="7" stroke-linecap="round" stroke-dasharray="4 16"/>
+        <circle cx="170" cy="322" r="13" fill="#E8734A"/>
+        <text x="62" y="272" font-size="22" font-weight="900" fill="#E8734A">1回目で、つまずく</text>
+        <text x="372" y="96" font-size="24" font-weight="900" fill="#0E7C86" text-anchor="end">直して、続けた会社</text>
+        <text x="570" y="342" font-size="22" font-weight="900" fill="#7C9396" text-anchor="end">やめた会社</text>
+        <text x="455" y="226" font-size="27" font-weight="900" fill="#C4491F" text-anchor="middle">手放した</text>
+        <text x="455" y="262" font-size="27" font-weight="900" fill="#C4491F" text-anchor="middle">時間と利益</text>
+        <text x="315" y="416" font-size="20" font-weight="900" fill="#4F6B6E" text-anchor="middle">時間がたつほど、差がひらく</text>
+        <text x="36" y="200" font-size="20" font-weight="900" fill="#4F6B6E" text-anchor="middle" transform="rotate(-90 36 200)">AIに任せられた仕事</text>
+      </svg>
     </div>
   </div>
 </section>
 
-<!-- 27 ワークの扉 -->
 <section class="slide bleed" data-sec="4">
   <img class="bg" src="img/v2_write.jpg" alt="">
-  <div class="veil" style="background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.93) 40%,rgba(255,255,255,0) 66%)"></div>
-  <div class="inner"><div class="box" style="max-width:500px">
-    <span class="sticker r">ここから、書く時間です</span>
-    <h1 class="r" style="--i:1;margin-top:18px;font-size:60px">配った紙に、<br><em class="c">御社の数字</em>を<br>書き出そう。</h1>
+  <div class="veil" style="background:linear-gradient(90deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.93) 42%,rgba(255,255,255,0) 68%)"></div>
+  <div class="inner"><div class="box" style="max-width:580px">
+    <span class="sticker r">ここからは、手を動かす時間です</span>
+    <h1 class="r" style="--i:1;margin-top:18px;font-size:46px;white-space:nowrap">配った紙に、<br>ご自身の<em class="c">会社・事業</em>の<br>数字を書き出しましょう。</h1>
     <p class="lead r" style="--i:2;font-size:27px;color:var(--ink)">シートの表と、<br>ペンをご用意ください。</p>
   </div></div>
 </section>
 
-<!-- 28 ものさし -->
-<section class="slide" data-sec="4" data-steps="2">
-  <span class="eyebrow r">計算に使う、ものさし</span>
-  <div class="row grow" style="gap:44px;align-items:center">
-    <div class="col r" style="--i:1;flex:0 0 330px;align-items:center">
-      <div class="slip">
-        <h4>給与明細</h4>
-        <div class="r"><span>月給</span><span class="num">30万円</span></div>
-        <div class="r add" data-s="1"><span>会社が別に払う分</span><span class="num">＋7.5万円</span></div>
-        <div class="r sum" data-s="1"><span>会社の支払い</span><span class="num">37.5万円</span></div>
+<section class="slide" data-sec="4" data-steps="3">
+  <span class="eyebrow r">計算に使う、目安</span>
+  <h1 class="r" style="--i:1;font-size:44px">従業員の1時間は、会社にとって<em class="c">約2,500円</em>。</h1>
+  <div class="row" style="gap:34px;margin-top:14px;align-items:flex-start">
+    <div class="col" style="flex:0 0 400px">
+      <div class="slip wide r" style="--i:2">
+        <h4>給与明細（例）<span>月給30万円の方</span></h4>
+        <div class="r"><span>基本給・手当</span><span class="num">300,000</span></div>
+        <div class="r sub"><span>健康保険・厚生年金（本人分）</span><span class="num">−45,000</span></div>
+        <div class="r sub"><span>雇用保険・税金など</span><span class="num">−20,000</span></div>
+        <div class="r cap" data-s="1"><span>ここから下は、明細に載らない「会社の負担」</span></div>
+        <div class="r add" data-s="1"><span>社会保険料の会社負担分</span><span class="num">＋45,000</span></div>
+        <div class="r add" data-s="1"><span>賞与の積立・交通費など</span><span class="num">＋30,000</span></div>
+        <div class="r sum" data-s="1"><span>会社が払う合計</span><span class="num">375,000</span></div>
       </div>
-      <p class="note" data-s="1" style="margin-top:14px;font-size:21px;text-align:center">社会保険料の会社負担や、<br>賞与の積み立てなどです。</p>
     </div>
     <div class="col" style="flex:1">
-      <h1 class="r" style="--i:2;font-size:46px">社員さんの1時間は、<br>会社にとって<em class="c">約2,500円</em>。</h1>
-      <div class="ruler" data-s="2" style="justify-content:flex-start;margin-top:26px">
-        <div class="box" style="padding:16px 26px"><div class="note" style="font-size:22px;font-weight:900;color:var(--teal)">毎週くり返す仕事</div><div class="big" style="font-size:76px;color:var(--ink)">週1<small>時間</small></div></div>
-        <div class="eq" style="font-size:56px">＝</div>
-        <div class="box g" style="padding:16px 26px"><div class="note" style="font-size:22px;font-weight:900;color:var(--gold)">1年続けると</div><div class="big gd num" style="font-size:76px">13<small>万円</small></div></div>
+      <div class="row" data-s="2" style="gap:14px;align-items:center">
+        <div class="mini"><small>会社が払う合計</small><b class="num">37.5万円</b></div><div class="eq">÷</div>
+        <div class="mini"><small>1か月に働く時間</small><b class="num">約150時間</b></div><div class="eq">＝</div>
+        <div class="mini hot"><small>1時間あたり</small><b class="num">約2,500円</b></div>
       </div>
-      <p class="lead" data-s="2" style="font-size:24px">シートには、この「週1時間＝年間13万円」の早見表が付いています。</p>
+      <div class="chain" data-s="3">
+        <div class="cn"><small>毎日</small><b class="num">12<i>分</i></b></div><span>▶</span>
+        <div class="cn"><small>1週間で</small><b class="num">1<i>時間</i></b></div><span>▶</span>
+        <div class="cn"><small>1か月で</small><b class="num">4<i>時間</i></b></div><span>▶</span>
+        <div class="cn hot"><small>1年で</small><b class="num">13<i>万円</i></b></div>
+      </div>
+      <p class="lead" data-s="3" style="font-size:24px;color:var(--ink);margin-top:14px">「毎日たった12分」のくり返しが、1年で13万円。<br>シートの早見表は、この計算でできています。</p>
     </div>
   </div>
 </section>
 
-<!-- 29 仕事の一覧 -->
 <section class="slide tint" data-sec="4">
   <span class="eyebrow r">たとえば、こんな仕事</span>
   <h1 class="r" style="--i:1;font-size:44px">「これ、うちにもある」に、<em>○をつけてください</em>。</h1>
@@ -855,53 +1022,48 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
   </div>
 </section>
 
-<!-- 30 シートの手順 -->
 <section class="slide" data-sec="4" data-steps="5" data-sheet="1" style="padding:34px 60px 78px">
   <div class="row grow" style="gap:34px;min-height:0">
-    <div style="flex:0 0 430px;align-self:center"><div class="sheetwrap zoomer" id="sheetA" style="height:607px"><div class="sz"><img src="img/sheet_v2_omote.png" alt="換算シート">
-      <div class="hl" data-only="1" style="left:5%;top:11.3%;width:90%;height:26%"><b>1</b></div>
-      <div class="hl" data-only="2" style="left:27%;top:50.2%;width:15.9%;height:24.8%"><b>2</b></div>
-      <div class="hl" data-only="3" style="left:42.6%;top:42%;width:15.8%;height:33%"><b>2</b></div>
-      <div class="hl" data-only="4" style="left:58.1%;top:50.2%;width:36%;height:24.8%"><b>2</b></div>
-      <div class="hl" data-only="5" style="left:5%;top:78.6%;width:90%;height:17.4%"><b>3</b></div>
-    </div></div></div>
+    <div style="flex:0 0 430px;align-self:center"><div class="sheetwrap zoomer" id="sheetA" style="height:607px"><div class="sz"><img src="img/sheet_v3_omote.png" alt="換算シート">
+      <div class="hl" data-only="1" style="left:6.2%;top:13.7%;width:87.6%;height:19.4%"><b>1</b></div>
+      <div class="hl" data-only="2" style="left:5.8%;top:54.2%;width:35.4%;height:24.5%"><b>2</b></div>
+      <div class="hl" data-only="3" style="left:41.7%;top:54.2%;width:15.7%;height:24.5%"><b>3</b></div>
+      <div class="hl" data-only="4" style="left:57.9%;top:54.2%;width:36.4%;height:24.5%"><b>4</b></div>
+      <div class="hl" data-only="5" style="left:6.2%;top:85.7%;width:87.6%;height:9.9%"><b>5</b></div>
+      </div></div></div>
     <div class="col" style="flex:1;justify-content:center">
       <span class="eyebrow r">書き方｜紙の、オレンジの枠のところに書きます</span>
       <div class="steps">
         <div class="stp" data-stp="1"><span class="n">1</span><div><b>くり返している仕事に、○をつける</b><span>まず3つ。「そのほか」に書き足しても大丈夫です。</span></div></div>
-        <div class="stp" data-stp="2"><span class="n">2</span><div><b>「週に何時間？」を書く</b><span>だいたいで大丈夫。社員さん全員の合計で。</span></div></div>
-        <div class="stp" data-stp="3"><span class="n">2</span><div><b>早見表から「1年でいくら？」を写す</b><span>例：週3時間なら、39万円。</span></div></div>
-        <div class="stp" data-stp="4"><span class="n">2</span><div><b>60%か30%を書いて、任せられる金額を写す</b><span>○をつけた仕事の右に、60か30が書いてあります。</span></div></div>
-        <div class="stp" data-stp="5"><span class="n">3</span><div><b>いちばん大きい仕事と、ゴールを1行</b><span>例：会議が終わって30分後には、議事録が全員に届いている。</span></div></div>
+        <div class="stp" data-stp="2"><span class="n">2</span><div><b>「週に何時間？」を書く</b><span>毎日12分なら、週1時間。従業員全員の合計で。</span></div></div>
+        <div class="stp" data-stp="3"><span class="n">3</span><div><b>早見表から「1年でいくら？」を写す</b><span>例：週3時間なら、39万円。</span></div></div>
+        <div class="stp" data-stp="4"><span class="n">4</span><div><b>60%か30%を書いて、任せられる金額を写す</b><span>○をつけた仕事の右に、60か30が書いてあります。</span></div></div>
+        <div class="stp" data-stp="5"><span class="n">5</span><div><b>いちばん大きい仕事と、ゴールを1行</b><span>例：会議が終わって30分後には、議事録が全員に届いている。</span></div></div>
       </div>
     </div>
   </div>
   <span class="hint">→ で次の場所</span>
 </section>
 
-<!-- 31 書くタイム -->
 <section class="slide tint" data-sec="4" style="padding:34px 60px 78px">
-  <div class="row grow" style="gap:34px;min-height:0;align-items:center">
-    <div style="flex:0 0 340px"><div class="sheetwrap" id="sheetB"><img src="img/sheet_v2_omote.png" alt="換算シート">
-      <span class="pin" style="left:1%;top:11.5%">1</span><span class="pin" style="left:1%;top:38.5%">2</span><span class="pin" style="left:1%;top:79%">3</span>
-    </div></div>
+  <div class="tmbox pop" style="--i:3"><div class="timer num" id="tm">5:00</div><div class="row" style="gap:8px"><button class="ui" id="tmGo" style="font-size:17px;padding:6px 16px;white-space:nowrap">スタート</button><button class="ui ghost" id="tmRe" style="font-size:17px;padding:6px 16px;white-space:nowrap">もどす</button></div></div>
+  <div class="row grow" style="gap:44px;min-height:0;align-items:center">
+    <div style="flex:0 0 380px"><div class="sheetwrap" id="sheetB"><img src="img/sheet_v3_omote.png" alt="換算シート"><span class="pin" style="left:2.2%;top:13.7%">1</span><span class="pin" style="left:1.7999999999999998%;top:54.2%">2</span><span class="pin" style="left:37.7%;top:54.2%">3</span><span class="pin" style="left:53.9%;top:54.2%">4</span><span class="pin" style="left:2.2%;top:85.7%">5</span></div></div>
     <div class="col" style="flex:1">
-      <span class="sticker r">書くタイム</span>
-      <h1 class="r" style="--i:1;margin-top:14px;font-size:44px">御社の数字を、<br><em class="c">5分</em>で書きましょう。</h1>
-      <ol style="margin-top:6px">
-        <li class="row r" style="--i:2;gap:14px;align-items:center;margin-top:12px;font-size:26px"><span class="badge" style="background:var(--coral)">1</span>仕事に○をつける</li>
-        <li class="row r" style="--i:3;gap:14px;align-items:center;margin-top:12px;font-size:26px"><span class="badge" style="background:var(--coral)">2</span>時間を書いて、金額を出す</li>
-        <li class="row r" style="--i:4;gap:14px;align-items:center;margin-top:12px;font-size:26px"><span class="badge" style="background:var(--coral)">3</span>最初の1つと、ゴールを書く</li>
+      <span class="sticker r">書く時間です</span>
+      <h1 class="r" style="--i:1;margin-top:14px;font-size:38px;line-height:1.4">約5分、お時間を取ります。<br>ご自身の数字を、<em class="c">記入してみましょう</em>。</h1>
+      <ol style="margin-top:8px">
+        <li class="row r" style="--i:2;gap:14px;align-items:center;margin-top:12px;font-size:28px;font-weight:900"><span class="badge" style="background:var(--coral)">1</span>くり返している仕事に、○をつける</li>
+        <li class="row r" style="--i:3;gap:14px;align-items:center;margin-top:12px;font-size:28px;font-weight:900"><span class="badge" style="background:var(--coral)">2</span>「週に何時間？」を書く</li>
+        <li class="row r" style="--i:4;gap:14px;align-items:center;margin-top:12px;font-size:28px;font-weight:900"><span class="badge" style="background:var(--coral)">3</span>早見表から「1年でいくら？」を写す</li>
+        <li class="row r" style="--i:5;gap:14px;align-items:center;margin-top:12px;font-size:28px;font-weight:900"><span class="badge" style="background:var(--coral)">4</span>60%か30%で、任せられる金額を出す</li>
+        <li class="row r" style="--i:6;gap:14px;align-items:center;margin-top:12px;font-size:28px;font-weight:900"><span class="badge" style="background:var(--coral)">5</span>いちばん大きい仕事と、ゴールを1行</li>
       </ol>
-    </div>
-    <div class="col pop" style="--i:2;flex:0 0 340px;align-items:center;background:#fff;border:3px solid var(--line);border-radius:30px;padding:20px 12px 24px">
-      <div class="timer num" id="tm" style="font-size:132px">5:00</div>
-      <div class="row" style="gap:10px;margin-top:10px"><button class="ui" id="tmGo" style="font-size:22px;padding:10px 22px;white-space:nowrap">スタート</button><button class="ui ghost" id="tmRe" style="font-size:22px;padding:10px 22px;white-space:nowrap">もどす</button></div>
+      <p class="note r" style="--i:7;font-size:22px;font-weight:700;margin-top:14px">だいたいの数字で大丈夫です。迷ったら、手を挙げてください。</p>
     </div>
   </div>
 </section>
 
-<!-- 32 その場で換算 -->
 <section class="slide" data-sec="4" id="calcSlide">
   <span class="eyebrow r">その場で換算</span>
   <h1 class="r" style="--i:1;font-size:44px">いちばん大きかった仕事を、<em class="c">1つ</em>教えてください。</h1>
@@ -920,70 +1082,92 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
   </div>
 </section>
 
-<!-- 33 8社 -->
 <section class="slide tint" data-sec="4">
-  <span class="eyebrow r">これまでに試してくださった8社の結果（複数回答）</span>
+  <span class="eyebrow r">事前に試してくださった8社の結果（複数回答）</span>
   <h1 class="r" style="--i:1;font-size:46px">多く選ばれた仕事は、<em>これでした</em>。</h1>
-  <div class="row" style="gap:30px;margin-top:10px;align-items:center">
-    <div class="hbar r" style="--i:2;flex:1">
-      <b>データ入力・転記・集計</b><div class="tr top"><i style="--w:100%"></i></div><span>4社</span>
-      <b>メール・LINEの返信</b><div class="tr"><i style="--w:75%"></i></div><span>3社</span>
-      <b>SNS・ブログの発信</b><div class="tr"><i style="--w:75%"></i></div><span>3社</span>
-      <b>議事録・報告書</b><div class="tr"><i style="--w:50%"></i></div><span>2社</span>
-      <b>申込書・顧客情報の入力</b><div class="tr"><i style="--w:50%"></i></div><span>2社</span>
-    </div>
-    <div class="col" style="flex:0 0 330px;gap:14px">
-      <div class="card r" style="--i:3;padding:16px 22px;gap:0"><div class="k">8社の平均、年間</div><div class="big num" style="font-size:64px">約<span data-count="126">126</span><small>万円</small></div></div>
-      <div class="card r" style="--i:4;padding:16px 22px;gap:0;border-color:var(--coral);background:#FFF6F1"><div class="k" style="color:var(--coral)">AIに任せられる金額</div><div class="big cr num" style="font-size:64px">約<span data-count="64">64</span><small>万円</small></div></div>
+  <div class="hbar r" style="--i:2;margin-top:26px">
+    <b>データ入力・転記・集計</b><div class="tr top"><i style="--w:100%"></i></div><span>4社</span>
+    <b>メール・LINEの返信</b><div class="tr"><i style="--w:75%"></i></div><span>3社</span>
+    <b>SNS・ブログの発信</b><div class="tr"><i style="--w:75%"></i></div><span>3社</span>
+    <b>議事録・報告書</b><div class="tr"><i style="--w:50%"></i></div><span>2社</span>
+    <b>申込書・顧客情報の入力</b><div class="tr"><i style="--w:50%"></i></div><span>2社</span>
+  </div>
+</section>
+
+<section class="slide" data-sec="4" data-steps="2">
+  <span class="eyebrow r">その8社の、書いた仕事を全部合わせた金額（1社あたりの平均）</span>
+  <h1 class="r" style="--i:1;font-size:44px">1社で、年間<em class="c">約64万円分</em>を、AIに任せられる計算でした。</h1>
+  <div class="hk">
+    <div class="hkrow" data-s="1"><b>くり返しの事務に<br>かかっているお金</b><div class="hkbar"><i style="--w:100%"></i></div><div class="big num" style="font-size:78px;color:var(--teal)">約<span>126</span><small>万円</small></div></div>
+    <div class="hkrow hot" data-s="2"><b>そのうち、<br>AIに任せられる分</b><div class="hkbar"><i style="--w:51%"></i></div><div class="big num redout" style="font-size:92px">約<span>64</span><small>万円</small></div></div>
+  </div>
+  <p class="lead" data-s="2" style="font-size:28px;color:var(--ink)">およそ半分です。<br>みなさんの紙では、いくらになりましたか？</p>
+</section>
+
+<section class="slide" data-sec="4" data-conf="1" data-steps="3">
+  <div class="conf"></div>
+  <div class="row grow" style="gap:44px;align-items:center">
+    <img class="pop" src="img/v3_dekita.jpg" alt="" style="flex:0 0 400px;width:400px;border-radius:30px;box-shadow:0 14px 34px rgba(10,90,98,.18)">
+    <div class="col" style="flex:1">
+      <span class="sticker r" style="font-size:28px">書けました</span>
+      <h1 class="r" style="--i:1;margin-top:18px;font-size:46px;line-height:1.4">いま書いた1枚が、<br><em class="c">「AIに任せる計画書」</em>です。</h1>
+      <ul class="chk">
+        <li data-s="1">どの仕事から、任せるか</li>
+        <li data-s="2">それは、年間いくら分か</li>
+        <li data-s="3">どうなったら、ゴールか</li>
+      </ul>
+      <p class="lead" data-s="3" style="font-size:25px;color:var(--ink)">コツ1の「先にゴールを決める」が、もう済んでいます。<br>あとは、1回やってみて、直すだけです。</p>
     </div>
   </div>
-  <p class="lead r" style="--i:5;font-size:26px">御社の数字は、いくらになりましたか？</p>
 </section>
 
-<!-- 34 できました -->
-<section class="slide center" data-sec="4" data-conf="1">
-  <div class="conf"></div>
-  <span class="sticker r" style="align-self:center;font-size:30px">できました</span>
-  <h1 class="hero r" style="--i:1;margin-top:20px">コツ1の「ゴールを決める」は、<br><em class="c">いま、終わりました</em>。</h1>
-  <p class="lead r" style="--i:2;font-size:30px">その1枚が、御社のゴールです。<br>あとは、1回やってみて、直すだけです。</p>
-</section>
-
-<!-- 35 明日の15分 -->
 <section class="slide" data-sec="5">
   <span class="eyebrow gold r">会社に戻ったら</span>
-  <h1 class="r" style="--i:1">明日、<em class="c">15分だけ</em>やってみてください。</h1>
-  <div class="loop">
-    <div class="lp r" style="--i:2"><span class="n">ゴール</span><b>シートを<br>見せる</b><span>その仕事をしている<br>社員さんに。</span></div>
-    <div class="lp hot r" style="--i:3"><span class="n">明日の15分</span><b>実演セットで<br>1回やってみる</b><span>議事録の設定文を、<br>貼るだけ。</span></div>
-    <div class="lp r" style="--i:4"><span class="n">そのあと</span><b>だめなところを<br>直す</b><span>「ここを、こうして」と伝える。</span></div>
-    <div class="lp r" style="--i:5"><span class="n">くり返す</span><b>うまくいった<br>形を残す</b><span>次の人も、同じようにできます。</span></div>
+  <h1 class="r" style="--i:1;font-size:46px">明日、<em class="c">15分だけ</em>やってみてください。</h1>
+  <div class="loop" style="margin-top:14px">
+    <div class="lp r" style="--i:2"><span class="n">ゴール</span><b>シートを<br>見せる</b><span>その仕事をしている<br>従業員さんに。</span></div>
+    <div class="lp hot r" style="--i:3"><span class="n">明日の15分</span><b>実演セットで<br>一緒に1回やる</b><span>設定文を、<br>貼るだけ。</span></div>
+    <div class="lp r" style="--i:4"><span class="n">そのあと</span><b>だめなところは<br>直すだけ</b><span>「ここを、こうして」<br>と伝える。</span></div>
+    <div class="lp gold r" style="--i:5"><span class="n">くり返す</span><b>うまくいった<br>形を残す</b><span>だれがやっても同じにできる。<br>それが会社の資産です。</span></div>
   </div>
-  <div class="row r" style="--i:6;margin-top:22px;gap:26px;align-items:center">
-    <img src="img/qr_omiyage.png" alt="QR" style="width:150px;height:150px;border:3px solid var(--teal);border-radius:18px;padding:8px;background:#fff;image-rendering:pixelated">
+  <div class="row r" style="--i:6;margin-top:14px;gap:26px;align-items:center">
+    <img src="img/qr_omiyage.png" alt="QR" style="width:124px;height:124px;border:3px solid var(--teal);border-radius:18px;padding:8px;background:#fff;image-rendering:pixelated">
     <p class="lead" style="margin-top:0">実演セットは、このQRから。<br>シートの裏にも、同じQRがあります。</p>
   </div>
 </section>
 
-<!-- 36 60分 -->
+<section class="slide tint" data-sec="5" data-steps="2">
+  <span class="eyebrow r">実演で使っていた道具</span>
+  <h1 class="r" style="--i:1;font-size:46px">自動で回すなら、<em class="c">Claude Code</em><span style="font-size:.5em;color:var(--ink2);margin-left:.5em">（クロード コード）</span></h1>
+  <div class="vs" style="margin-top:20px">
+    <div class="p r" style="--i:2"><span class="tag">ChatGPT・Gemini などの会話の画面</span><h3 style="font-size:30px">聞いたら、答えてくれる。</h3><ul><li>答えを、人がコピーして使う</li><li>会話だけでは、自動で回らない</li></ul></div>
+    <div class="p good" data-s="1"><span class="tag">Claude Code</span><h3 style="font-size:30px">パソコンの中で、<br>仕事を最後までやる。</h3><ul><li>ファイルを読んで、作って、保存する</li><li>時間を決めて、自動で動かせる</li></ul></div>
+  </div>
+  <div class="row" data-s="2" style="margin-top:20px;gap:18px;align-items:center">
+    <img src="img/qr_omiyage.png" alt="QR" style="width:120px;height:120px;border:3px solid var(--teal);border-radius:16px;padding:6px;background:#fff;image-rendering:pixelated">
+    <p class="lead" style="margin-top:0;font-size:27px;color:var(--ink)">入れ方は、実演セットの最初に付けてあります。<br>画面の写真つきで、順番に進めるだけです。</p>
+  </div>
+</section>
+
 <section class="slide bleed" data-sec="5">
   <img class="bg" src="img/v2_soudan.jpg" alt="" style="object-position:right center">
   <div class="veil" style="background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.95) 44%,rgba(255,255,255,0) 68%)"></div>
   <div class="inner"><div class="box" style="max-width:560px">
     <span class="sticker teal r">「うちの場合は？」と思ったら</span>
     <h1 class="r" style="--i:1;margin-top:18px;font-size:58px;white-space:nowrap">その1枚の続きは、<br><em class="c">60分で。</em></h1>
-    <p class="lead r" style="--i:2;font-size:25px;color:var(--ink)">今夜書いた1枚を、そのままお持ちください。<br>どの仕事から、どの順番でAIに任せるか。<br>御社に合わせて、一緒に組み立てます。</p>
+    <p class="lead r" style="--i:2;font-size:25px;color:var(--ink)">Zoomで、個別にご相談を受けています。<br>今夜書いた1枚を、そのままお持ちください。<br>どの仕事から、どの順番で任せるか。<br>一緒に組み立てます。</p>
     <div class="row r" style="--i:3;margin-top:16px;gap:18px;align-items:center"><img src="img/qr_omiyage.png" alt="QR" style="width:150px;height:150px;border:3px solid var(--teal);border-radius:16px;padding:6px;background:#fff;image-rendering:pixelated"><div class="col" style="gap:10px;align-items:flex-start"><span class="pill solid" style="font-size:24px">Zoom・60分</span><span class="pill gold" style="font-size:24px">ご予約は、このQRから</span></div></div>
   </div></div>
 </section>
 
-<!-- 37 最後 -->
 <section class="slide bleed" data-sec="5">
   <img class="bg" src="img/future_wide.jpg" alt="">
-  <div class="inner" style="padding:44px 70px 44px;justify-content:center"><div class="box" style="max-width:560px">
-    <h1 class="hero r" style="--i:1;font-size:48px;white-space:nowrap">朝、出社したら、<br><em class="c">もう終わっている。</em></h1>
+  <div class="veil warm"></div>
+  <div class="inner" style="padding:40px 70px 40px;justify-content:center"><div class="box" style="max-width:600px">
+    <h1 class="hero r" style="--i:1;font-size:44px;white-space:nowrap">くり返しの事務は、<em class="c">AIに</em>。<br>人は、<em class="c">人にしか<br>できない仕事</em>へ。</h1>
     <p class="lead r" style="--i:2;font-size:30px;color:var(--ink);margin-top:10px">ご質問を、どうぞ。</p>
-    <div class="col pop" style="--i:3;margin-top:20px;gap:8px;align-items:center;background:rgba(255,255,255,.96);border-radius:26px;padding:16px 18px;box-shadow:0 12px 30px rgba(120,90,20,.2);width:fit-content">
-      <img src="img/qr_omiyage.png" alt="QR" style="width:210px;height:210px;image-rendering:pixelated">
+    <div class="col pop" style="--i:3;margin-top:18px;gap:8px;align-items:center;background:rgba(255,255,255,.96);border-radius:26px;padding:16px 18px;box-shadow:0 12px 30px rgba(120,90,20,.2);width:fit-content">
+      <img src="img/qr_omiyage.png" alt="QR" style="width:200px;height:200px;image-rendering:pixelated">
       <p style="font-size:21px;font-weight:900;line-height:1.45;color:var(--deep);text-align:center">今夜の実演セット<br>続きの60分のご予約</p>
     </div>
   </div></div>
@@ -1034,7 +1218,7 @@ button.ui.cp.ok{background:var(--teal);box-shadow:0 6px 0 var(--deep)}
     [].forEach.call(f.querySelectorAll('[data-stp]'),function(e){var k=+e.dataset.stp;e.classList.toggle('cur',step===k);e.classList.toggle('done',step>k)});
     if(slides[n].dataset.quiz){f.classList.toggle('ans',step>=1)}
     if(slides[n].dataset.sheet){
-      var Z={0:[50,50,1],1:[50,26,1.22],2:[38,62,1.9],3:[50,58,1.9],4:[70,62,1.9],5:[50,84,1.22]}[step]||[50,50,1];
+      var hlE=f.querySelector('.hl[data-only="'+step+'"]'),Z=[50,50,1];if(hlE){var L=parseFloat(hlE.style.left),Tp=parseFloat(hlE.style.top),W=parseFloat(hlE.style.width),H=parseFloat(hlE.style.height);Z=[L+W/2,Tp+H/2,Math.max(1.15,Math.min(2,Math.min(86/W,80/H)))];}
       var sz=f.querySelector('.sz'); if(sz){var s=Z[2],lim=50-50/s,tx=Math.max(-lim,Math.min(lim,50-Z[0])),ty=Math.max(-lim,Math.min(lim,50-Z[1]));
         sz.style.transform=scroll?'none':'scale('+s+') translate('+tx+'%,'+ty+'%)';}
     }
