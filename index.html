@@ -532,6 +532,21 @@ button.ui.cp,a.ui.cp{white-space:nowrap}
 
 .zoomer .hl b{left:4px;top:4px}
 
+/* 11/17 昼：一覧の読み解き */
+.yk{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px}
+.ykc{position:relative;background:#fff;border:3px solid var(--soft);border-radius:26px;padding:24px 22px 18px 26px;box-shadow:0 10px 26px rgba(10,90,98,.10)}
+.ykc .n{position:absolute;left:-12px;top:-16px;width:52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900;font-size:28px;display:flex;align-items:center;justify-content:center}
+.ykc>b{display:block;font-size:27px;font-weight:900;line-height:1.4}
+.ykc .v{margin-top:10px;font-size:44px;font-weight:900;line-height:1.2;color:var(--teal);white-space:nowrap}
+.ykc .v.t{font-size:36px;line-height:1.3}
+.ykc .v small{display:block;font-size:18px;font-weight:700;color:var(--ink);opacity:.7}
+.ykc .v i{font-style:normal;font-size:.5em;margin-left:2px}
+.ykc .v em{font-style:normal;color:#E0431A;display:block;font-size:1.25em}
+.ykc p{margin:8px 0 0;font-size:20px;font-weight:700;line-height:1.5}
+.ykb{margin-top:20px;background:var(--ink);color:#fff;border-radius:22px;padding:16px 28px;font-size:30px;font-weight:900;line-height:1.5;text-align:center}
+.ykb b{color:#FFD86B;font-size:1.3em}.ykb b.g{color:#FFB199}
+.ykb span{display:block;font-size:.82em}
+
 </style>
 </head>
 <body>
@@ -1082,26 +1097,22 @@ button.ui.cp,a.ui.cp{white-space:nowrap}
   </div>
 </section>
 
-<section class="slide tint" data-sec="4">
-  <span class="eyebrow r">事前に試してくださった8社の結果（複数回答）</span>
-  <h1 class="r" style="--i:1;font-size:46px">多く選ばれた仕事は、<em>これでした</em>。</h1>
-  <div class="hbar r" style="--i:2;margin-top:26px">
-    <b>データ入力・転記・集計</b><div class="tr top"><i style="--w:100%"></i></div><span>4社</span>
-    <b>メール・LINEの返信</b><div class="tr"><i style="--w:75%"></i></div><span>3社</span>
-    <b>SNS・ブログの発信</b><div class="tr"><i style="--w:75%"></i></div><span>3社</span>
-    <b>議事録・報告書</b><div class="tr"><i style="--w:50%"></i></div><span>2社</span>
-    <b>申込書・顧客情報の入力</b><div class="tr"><i style="--w:50%"></i></div><span>2社</span>
-  </div>
+<section class="slide tint center" data-sec="4">
+  <span class="sticker teal r" style="align-self:center;font-size:28px">届いた数字を、一覧で見ます</span>
+  <h1 class="hero r" style="--i:1;margin-top:22px">ここで、<br><em class="c">受付番号ごとの一覧</em>に切り替えます。</h1>
+  <p class="lead r" style="--i:2;font-size:30px">会社名とお名前は出ません。受付番号で並んでいます。<br>右上の「AIの読み解き」にも、ご注目ください。</p>
+  
 </section>
 
-<section class="slide" data-sec="4" data-steps="2">
-  <span class="eyebrow r">その8社の、書いた仕事を全部合わせた金額（1社あたりの平均）</span>
-  <h1 class="r" style="--i:1;font-size:44px">1社で、年間<em class="c">約64万円分</em>を、AIに任せられる計算でした。</h1>
-  <div class="hk">
-    <div class="hkrow" data-s="1"><b>くり返しの事務に<br>かかっているお金</b><div class="hkbar"><i style="--w:100%"></i></div><div class="big num" style="font-size:78px;color:var(--teal)">約<span>126</span><small>万円</small></div></div>
-    <div class="hkrow hot" data-s="2"><b>そのうち、<br>AIに任せられる分</b><div class="hkbar"><i style="--w:51%"></i></div><div class="big num redout" style="font-size:92px">約<span>64</span><small>万円</small></div></div>
+<section class="slide" data-sec="4" data-steps="4">
+  <span class="eyebrow r">一覧を読み解くと（きょうの昼までに届いた、青年部会の5社）</span>
+  <h1 class="r" style="--i:1;font-size:46px">数字を並べると、<em class="c">3つ</em>見えてきます。</h1>
+  <div class="yk">
+    <div class="ykc" data-s="1"><span class="n">1</span><b>およそ半分は、<br>AIに任せられる</b><div class="v"><small>1社あたり 年間</small>約102<i>万円</i><em>→ 約51<i>万円</i></em></div></div>
+    <div class="ykc" data-s="2"><span class="n">2</span><b>5社とも、<br>最初の1つは同じ仕事</b><div class="v t">データ入力・<br>転記・集計</div><p>会社が違っても、重なります。</p></div>
+    <div class="ykc" data-s="3"><span class="n">3</span><b>時間にすると、<br>1社で週10時間</b><div class="v"><small>月にすると</small><em>約44<i>時間</i></em></div><p>毎週1日以上が、事務だけに。</p></div>
   </div>
-  <p class="lead" data-s="2" style="font-size:28px;color:var(--ink)">およそ半分です。<br>みなさんの紙では、いくらになりましたか？</p>
+  <div class="ykb" data-s="4">もし会場の50社が同じなら、年間 <b>約5,100万円</b>。<span>そのうち <b class="g">約2,550万円</b>が、AIに任せられる計算です。</span></div>
 </section>
 
 <section class="slide" data-sec="4" data-conf="1" data-steps="3">
