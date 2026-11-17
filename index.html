@@ -1200,6 +1200,7 @@ button.ui.cp,a.ui.cp{white-space:nowrap}
 
 </div>
 <div class="nav"><button id="bPrev">‹</button><button id="bNext">›</button><button id="bFull">全画面</button></div>
+
 <script>
 (function(){
   var deck=document.getElementById('deck');
@@ -1326,6 +1327,50 @@ button.ui.cp,a.ui.cp{white-space:nowrap}
   var start=parseInt(q[0],10), st0=parseInt(q[1],10)||0;
   cur=isNaN(start)?0:Math.max(0,Math.min(slides.length-1,start-1));
   step=st0; fit();
+})();
+
+/* 11/17 夕：「一覧を開く」は、別タブではなくスライドの上に重ねて開く（確認用ページでも動くように） */
+(function(){
+  if(!window.__DASH) return;
+  var ov=null,sr=null,keyFn=null;
+  function close(){if(ov){ov.remove();ov=null;sr=null;keyFn=null}}
+  function open(){
+    if(ov) return;
+    ov=document.createElement('div');
+    ov.style.cssText='position:fixed;inset:0;z-index:9999;background:#f4f8f6;display:flex;flex-direction:column';
+    var bar=document.createElement('div');
+    bar.style.cssText='flex:0 0 auto;display:flex;justify-content:flex-end;padding:8px 14px;background:#0B3B33';
+    var b=document.createElement('button');
+    b.textContent='スライドに戻る ✕';
+    b.style.cssText='font:900 18px/1 "Zen Maru Gothic",sans-serif;color:#0B3B33;background:#fff;border:0;border-radius:999px;padding:10px 20px;cursor:pointer';
+    b.addEventListener('click',close);
+    bar.appendChild(b);
+    var host=document.createElement('div');
+    host.style.cssText='flex:1 1 auto;overflow:auto;min-height:0';
+    sr=host.attachShadow({mode:'open'});
+    sr.innerHTML='<style>'+window.__DASH.css+'</style><div class="dbody" style="min-height:100%">'+window.__DASH.html+'</div>';
+    ov.appendChild(bar);ov.appendChild(host);
+    (document.fullscreenElement||document.body).appendChild(ov);
+    var px={
+      getElementById:function(i){return sr.getElementById(i)},
+      querySelector:function(q){return sr.querySelector(q)},
+      querySelectorAll:function(q){return sr.querySelectorAll(q)},
+      createElement:function(n){return document.createElement(n)},
+      addEventListener:function(t,fn){if(t==='keydown')keyFn=fn; else sr.addEventListener(t,fn)}
+    };
+    window.__DASH.run(px);
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href="dashboard.html"]');
+    if(a){e.preventDefault();e.stopPropagation();open()}
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(!ov) return;
+    e.stopImmediatePropagation();
+    var dlg=sr&&sr.querySelector('#ov.on');
+    if(e.key==='Escape'&&!dlg){e.preventDefault();close();return}
+    if(keyFn) keyFn(e);
+  },true);
 })();
 
 </script>
